@@ -1,0 +1,946 @@
+@font-face {
+    font-family: 'Barcode';
+    src: url($lib/Fonts/LibreBarcode39Text-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Title';
+    src: url($lib/Fonts/BBHBartle-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Paragraph';
+    src: url($lib/Fonts/ZenDots-Regular.ttf) format('truetype');
+}
+
+:root {
+    --DeepBrown: rgb(28,8,1);
+    --GrungeGreen: rgb(117,107,35);
+    --GrungeYellow: rgb(147,107,37);
+    --EngineOrange: rgb(200,104,41);
+    --SoftRed: rgb(138,52,40);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    aspect-ratio: 16 / 9;
+    min-width: 1920px;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beginning of the HEADER div
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Header {
+    background-color: var(--DeepBrown);
+    max-height: max(365px, 19vw);
+    padding: 0;
+    overflow: hidden;
+}
+
+.Welcome {
+    position: relative;
+    display: block;
+    color: var(--GrungeGreen);
+    font-family: 'Barcode';
+    font-size: max(70px, 3.6vw);
+    top: min(-3rem, -2.6vw);
+    left: max(1.7rem, 1.4vw);
+}
+
+.HeaderTrip {
+    position: relative;
+    display: block;
+    width: max(16rem, 13.6vw);
+    height: auto;
+    top: min(-1.2rem, -1vw);
+    left: max(1rem, .8vw);
+    border: max(.5rem, .4vw) solid var(--GrungeGreen);
+}
+
+.HeaderBar {
+    position: relative;
+    display: block;
+    width: max(82rem, 68.3vw);
+    height: auto;
+    left: max(19rem, 15.8vw);
+    top: min(-7.4rem, -6.1vw);
+}
+
+.NameTitle {
+    position: relative;
+    display: block;
+    width: max(1920px, 100vw);
+    height: auto;
+    top: min(-30rem, -25vw);
+}
+
+.Work {
+    position: relative;
+    display: block;
+    top: min(-46.3rem, -38.5vw);
+    margin-left: auto;
+    right: max(16.8rem, 14vw);
+    background-color: var(--DeepBrown);
+    color: var(--GrungeGreen);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.4vw);
+    border: 5px solid var(--GrungeGreen);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    width: max(5.7rem, 4.7vw);
+    text-decoration: none;
+
+}
+
+.Work:hover {
+    color: var(--DeepBrown);
+    background-color: var(--GrungeGreen);
+}
+
+.About {
+    position: relative;
+    display: block;
+    top: min(-50.1rem, -41.5vw);
+    margin-left: auto;
+    right: max(9.05rem,7.5vw);
+    background-color: var(--GrungeGreen);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    font-size: max(24px, 1.25vw);
+    border: 5px solid var(--GrungeGreen);
+    border-radius: 20px;
+    padding: max(8px, .4vw);
+    padding-block: max(10px, .5vw);
+    transform: scaleY(1.08);
+    width: max(5.7rem, 4.7vw);
+    text-decoration: none;
+}
+
+.About:hover {
+    color: var(--GrungeGreen);
+    background-color: var(--DeepBrown);
+}
+
+#About_Section {
+    scroll-margin-top: 80px;
+}
+
+.Contact {
+    position: relative;
+    display: block;
+    top: min(-53.95rem, -44.5vw);
+    margin-left: auto;
+    right: max(1rem, .8vw);
+    background-color: var(--DeepBrown);
+    color: var(--GrungeGreen);
+    font-family: 'Paragraph';
+    font-size: max(18px, .9vw);
+    border: 5px solid var(--GrungeGreen);
+    border-radius: 20px; 
+    padding: max(10px, .5vw);
+    padding-block: max(16px, .8vw);
+    width: max(5.7rem, 4.7vw);
+    text-decoration: none;
+}
+
+.Contact:hover {
+    color: var(--DeepBrown);
+    background-color: var(--GrungeGreen);
+}
+
+#Contact_Section {
+    scroll-margin-top: 1180px;
+    width: 100%;
+    height: auto; 
+    overflow-anchor: auto;
+}
+
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beginning of the LIVING SPACES div
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.LivingSpaces {
+    background-color: var(--DeepBrown);
+    max-height: max(462px, 23.8vw);
+    overflow: hidden;
+}
+
+/*
+max-height: 462px
+*/
+
+.LS_Title {
+    position: relative;
+    display: block;
+    top: max(.5rem, .5vw);
+    left: max(.5rem, .4vw);
+    width: max(55rem, 46vw);
+    height: auto;
+}
+
+.LS_Light01 {
+    position: relative;
+    display: block;
+    top: min(-13.5rem, -11vw);
+    left: max(.4rem, .3vw);
+    width: max(55rem, 46vw);
+    height: auto;
+}
+
+.LS_Light02 {
+    position: relative;
+    display: block;
+    top: min(-27.5rem, -22.9vw);
+    left: max(.4rem, .3vw);
+    width: max(55rem, 46vw);
+    height: auto;
+    opacity: .8;
+}
+
+.LS_Light03 {
+    position: relative;
+    display: block;
+    top: min(-41.5rem, -34.7vw);
+    left: max(.4rem, .3vw);
+    width: max(55rem, 46vw);
+    height: auto;
+    opacity: .6;
+}
+
+.LS_Light04 {
+    position: relative;
+    display: block;
+    top: min(-55.5rem, -46.4vw);
+    left: max(.4rem, .3vw);
+    width: max(55rem, 46vw);
+    height: auto;
+    opacity: .4;
+}
+
+.LS_Light05 {
+    position: relative;
+    display: block;
+    top: min(-69.5rem, -58.1vw);
+    left: max(.4rem, .3vw);
+    width: max(55rem, 46vw);
+    height: auto;
+    opacity: .2;
+}
+
+.LS_SC {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    right: max(1rem, 1vw);
+    top: min(-86.3rem, -72.1vw);
+    width: max(48rem, 40.1vw);
+    height: auto;
+    border: max(.5rem, .4vw) solid var(--SoftRed);
+}
+
+.Stars_01 {
+    position: relative;
+    display: block;
+    top: min(-114.8rem, -95.9vw);
+    left: max(55.5rem, 46.4vw);
+    width: max(7.3rem, 6.1vw);
+    height: auto;
+}
+
+.Household {
+    font-family: 'Barcode', sans-serif;
+    font-size: max(100px, 5.2vw);
+    position: relative;
+    display: block;
+    top: min(-78.5rem, -65.7vw);
+    left: max(6rem, 5vw);
+    color: var(--GrungeGreen);
+    z-index: 2;
+    margin: 0;
+    rotate: 90deg;
+}
+
+.Nokia {
+    position: relative;
+    display: block;
+    top: min(-126rem, -105.1vw);
+    left: max(.5rem, .2vw);
+    width: max(10rem, 8.3vw);
+}
+
+.Play_Bar {
+    position: relative;
+    display: block;
+    top: min(-137rem, -114.6vw);
+    left: max(40.3rem, 33.7vw);
+    width: max(15rem, 12.5vw);
+    height: auto;
+}
+
+.Blender {
+    position: relative;
+    display: block;
+    top: min(-139.3rem, -116.1vw);
+    font-family: 'Paragraph';
+    font-size: max(43px, 2.1vw);
+    color: var(--DeepBrown);
+    left: max(40.6rem, 33.8vw);
+    z-index: 2;
+    letter-spacing: max(.65rem, .54vw);
+    background-color: var(--GrungeYellow);
+    width: max(21.15rem, 17.6vw);
+    padding-inline: max(4px, .2vw);
+    border-radius: max(5px, .3vw);
+}
+
+.W {
+    position: relative;
+    display: block;
+    top: min(-142.5rem, -118.7vw);
+    left: max(70.5rem, 58.7vw);
+    font-family: 'Paragraph';
+    font-size: max(54px, 2.8vw);
+    color: var(--SoftRed);
+    letter-spacing: max(.7rem, .6vw);
+    z-index: 3;
+    transform: scaleX(1.5)
+}
+
+.Satisfaction {
+    position: relative;
+    display: block;
+    top: min(-98rem, -81.7vw);
+    left: min(-48.5rem, -40.9vw);
+    font-family: 'Paragraph';
+    font-size: max(20px, 1vw);
+    color: var(--EngineOrange);
+    z-index: 3;
+    rotate: 90deg;
+}
+
+.Years {
+    position: relative;
+    display: block;
+    top: min(-150.4rem, -125.3vw);
+    left: max(22rem, 18.3vw);
+    font-family: 'Paragraph';
+    font-size: max(20px, 1vw);
+    color: var(--EngineOrange);
+    z-index: 3;
+}
+
+.Line-Graph {
+    position: relative;
+    top: min(-172.8rem, -144vw);
+    height: max(28.5rem, 23.7vw);
+    width: max(28.5rem, 23.7vw);
+    left: max(9.2rem, 7.6vw);
+    border-bottom: max(7px, .3vw) solid var(--EngineOrange);
+    border-left: max(3px, .1vw) solid var(--EngineOrange);
+    transform: scaleY(.36842105263157894736842105263158)
+}
+
+.data-point {
+    background-color: var(--EngineOrange);
+    border-radius: 50%;
+    height: max(13px, .7vw);
+    width: max(5px, .25vw);
+    position: absolute;
+    bottom: calc(var(--y) - .2vw);
+    left: calc(var(--x) - .1vw);
+}
+
+.line-segment {
+    background-color: var(--EngineOrange);
+    bottom: var(--y);
+    height: max(2px, .08vw);
+    left: var(--x);
+    position: absolute;
+    transform: rotate(calc(var(--angle) * 1deg));
+    transform-origin: left bottom;
+    width: calc(var(--hypotenuse) * 1%);
+}
+
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beginning of the SLEEPLESS NIGHT div
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.sleepless-night {
+    background-color: var(--DeepBrown);
+    max-height: max(465px, 24.2vw);
+}
+
+.SNSC {
+    position: relative;
+    display: block;
+    left: max(1rem, .9vw);
+    top: max(1rem, .9vw);
+    width: max(46rem, 38.3vw);
+    height: auto;
+    border: max(.5rem, .4vw) solid var(--EngineOrange); 
+}
+
+.Sleepless {
+    position: relative;
+    display: block;
+    left: max(12rem, 10vw);
+    top: min(-42.5rem, -35.4vw);
+    font-family: 'Title';
+    font-size: max(200px, 10.4vw);
+    color: var(--GrungeGreen);
+    transform: scaleX(.395);
+}
+
+.Night {
+    position: relative;
+    display: block;
+    left: max(12rem, 10vw);
+    top: min(-60.5rem, -50.5vw);
+    font-family: 'Title';
+    font-size: max(200px, 10.4vw);
+    color: var(--GrungeYellow);
+    transform: scaleX(.395);
+}
+
+.Stars_Line {
+    position: relative;
+    display: block;
+    top: min(-85.3rem, -71.3vw);
+    left: max(80.8rem, 67.4vw);
+    width: max(26rem, 21.5%);
+    height: auto;
+}
+
+.Cosmic_Swirl {
+    position: relative;
+    display: block;
+    top: min(-97.4rem, -81.2vw);
+    margin-left: auto;
+    width: max(9.5vw, 9.5%);
+    height: auto;
+    right: max(1rem, .9vw);
+    border: max(.5rem, .4vw) solid var(--EngineOrange);
+}
+
+.Chevron {
+    position: relative;
+    display: block;
+    top: min(-97rem, -80.8vw);
+    left: max(48rem, 40vw);
+    width: max(60rem, 50%);
+    height: auto;
+}
+
+.ButtonTimer {
+    position: relative;
+    display: block;
+    top: min(-106.5rem, -88.7vw);
+    left: max(48.5rem, 40.4vw);
+    width: max(4.8rem, 4%);
+    height: auto;
+}
+
+.ButtonBedTime {
+    position: relative;
+    display: block;
+    top: min(-111.3rem, -92.7vw);
+    left: max(54rem, 45vw);
+    width: max(4.8rem, 4%);
+    height: auto;
+}
+
+.ButtonMoon {
+    position: relative;
+    display: block;
+    top: min(-116.1rem, -96.7vw);
+    left: max(59.5rem, 49.6vw);
+    width: max(4.8rem, 4%);
+    height: auto;
+}
+
+.ButtonLock {
+    position: relative;
+    display: block;
+    top: min(-120.9rem, -100.7vw);
+    left: max(65rem, 54.2vw);
+    width: max(4.8rem, 4%);
+    height: auto;
+}
+
+.ButtonWifi {
+    position: relative;
+    display: block;
+    top: min(-125.7rem, -104.7vw);
+    left: max(70.5rem, 58.8vw);
+    width: max(4.8rem, 4%);
+    height: auto;
+}
+
+.ButtonCellular {
+    position: relative;
+    display: block;
+    top: min(-130.6rem, -108.7vw);
+    left: max(76rem, 63.4vw);
+    width: max(4.8rem, 4%);
+    height: auto;
+}
+
+.SN_Description {
+    position: relative;
+    display: block;
+    top: min(-143.7rem, -119.7vw);
+    left: max(78.3rem, 65.2vw);
+    font-family: 'Paragraph';
+    font-size: max(30px, 1.5vw);
+    color: var(--GrungeGreen);
+    line-height: 1;
+    transform: scaleX(.95)
+}
+
+.Planet {
+    position: relative;
+    display: block;
+    top: min(-163.4rem, -136.1vw);
+    margin-left: auto;
+    right: max(1.8rem, 1.6vw);
+    width: max(24.4rem, 20.3%);
+    height: auto;
+}
+
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beginning of the LOGO MANIA div
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Logo_Mania {
+    background-color: var(--DeepBrown);
+    min-width: 1920px;
+    max-height: max(480px, 25vw);
+}
+
+.GhostlyRose {
+    position: relative;
+    display: block;
+    width: 42rem;
+    height: auto;
+    left: max(1rem, .8vw);
+    top: max(1rem, .8vw);
+    border: max(.5rem, .4vw) solid var(--EngineOrange);
+}
+
+.BarLines {
+    display: block;
+    position: relative;
+    width: max(1190px, 62vw);
+    height: auto;
+    margin-left: auto;
+    right: max(1rem, .8vw);
+    top: min(-29.1rem, -24.2vw);
+    
+}
+
+.Logo {
+    display: block;
+    position: relative;
+    font-family: 'Title';
+    font-size: max(100px, 5.2vw);
+    color: var(--SoftRed);
+    left: max(44.5rem, 37vw);
+    top: min(-34rem, -28.3vw);
+    transform: scaleY(2);
+}
+
+.Mania {
+    display: block;
+    position: relative;
+    font-family: 'Title';
+    font-size: max(100px, 5.2vw);
+    top: min(-47.9rem, -39.9vw);
+    transform: scaleY(2);
+    color: var(--EngineOrange);
+    text-align: right;
+    right: max(1.3rem, 1.1vw);
+}
+
+.Arrows {
+    display: block;
+    position: relative;
+    left: max(44.8rem, 37.3vw);
+    top: min(-53rem, -44.1vw);
+    width: max(24rem, 20vw);
+    height: auto;
+}
+
+.Rectangles {
+    position: relative;
+    display: block;
+    top: min(-53rem, -44.1vw);
+    left: max(45rem, 37.5vw);
+    width: max(24rem, 20vw);
+    height: max(12.5rem, 10.4vw);
+}
+
+.RRectangles {
+    position: relative;
+    display: block;
+    top: min(-70.5rem, -58.7vw);
+    left: max(69rem, 57.5vw);
+    width: max(22rem, 18.3vw);
+    height: auto;
+}
+
+.Checkers {
+    position: relative;
+    display: block;
+    top: min(-70.5rem, -58.7vw);
+    left: max(69rem, 57.5vw);
+    width: max(22rem, 18.3vw);
+    height: auto;
+}
+
+.Swirlies {
+    position: relative;
+    display: block;
+    top: min(-84.6rem, -70.5vw);
+    margin-left: auto;
+    right: max(1rem, .8vw);
+    width: max(27.8rem, 23.2vw);
+    height: max(9.3rem, 7.7vw);
+}
+
+.SearchBar {
+    position: relative;
+    display: block;
+    top: -84.5rem;
+    margin-left: auto;
+    width: 28rem;
+    height: auto;
+    right: 1rem;
+}
+
+.Branding {
+    position: relative;
+    display: block;
+    text-align: right;
+    font-family: 'Paragraph';
+    font-size: 27px;
+    color: var(--GrungeGreen);
+    right: 2.2rem;
+    top: -89.5rem;
+}
+
+.GradientBar {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    right: 1rem;
+    top: -89.8rem;
+    width: 50rem;
+    height: auto;
+}
+
+.FluffWords {
+    position: relative;
+    display: block;
+    left: 46.2rem;
+    top: -103.3rem;
+    font-size: 30px;
+    font-family: 'Paragraph';
+    color: var(--DeepBrown);
+}
+
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beginning of the PROFILE div
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.profile {
+    background-color: var(--DeepBrown);
+    max-height: max(1180px, 115%);
+    min-width: 1920px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.Profile_Image {
+    position: relative;
+    display: block;
+    left: max(62vw, 75rem);
+    top: min(-3vw, -3rem);
+    width: auto;
+    height: 47vw;
+    z-index: 2;
+    min-height: 54.4rem;
+    min-width: 25rem;
+}
+
+.barcode {
+    font-family: 'Barcode', sans-serif;
+    font-size: max(67px, 3.45vw);
+    position: relative;
+    top: max(1vw, 1rem);
+    left: max(1vw, 1rem);
+    margin: 0;
+    color: var(--GrungeGreen); 
+}
+
+.ContactFN {
+    font-family: 'Title';
+    font-size: max(148.5px, 7.7vw);
+    color: var(--SoftRed);
+    display: block;
+    position: relative;
+    top: min(-55.5rem, -47.5vw);
+    left: max(1rem, 1vw);
+    margin: 0;
+    transform: scaleY(.9);
+    z-index: 4;
+}
+
+.ContactLN {
+    font-family: 'Title';
+    font-size: max(127px, 6.58vw);
+    color: var(--EngineOrange);
+    display: block;
+    position: relative;
+    top: min(-59rem, -50.5vw);
+    left: max(1rem, 1vw);
+    margin: 0;
+    transform: scaleY(.8)
+}
+
+.StarLine {
+    width: 62%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-62rem, -53vw);
+    left: max(1rem, 1vw);
+    margin: 0;
+}
+
+.Description {
+    font-family: 'Paragraph', sans-serif;
+    font-size: max(39.5px, 2.04vw);
+    line-height: 1;
+    color: var(--GrungeGreen);
+    display: block;
+    position: relative;
+    top: min(-62.5rem, -53.3vw);
+    left: max(1.3rem, 1.02vw);
+    margin: 0;
+}
+
+.Banner {
+    width: 60%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-62.3rem, -53vw);
+    left: max(1rem, 1vw);
+    margin: 0;
+    z-index: 1;
+}
+
+.Moons {
+    width:60%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-67.7rem, -57.6vw);
+    left: max(1rem, 1vw);
+    margin: 0;
+    z-index: 2;
+}
+
+.Battery01 {
+    width: 10.8%;
+    height: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    top: min(-69rem, -58vw);
+    right: max(44rem, 37vw);
+    z-index:1;
+}
+
+.BlackHole { 
+    width: 16.5%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-84.5rem, -71vw);
+    left: max(43.3rem, 35.8vw);
+    z-index: 1;
+}
+
+.Circuits {
+    width: 38%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-107rem, -89.8vw);
+    left: max(30.2rem, 24.8vw);
+    z-index: 1;
+}
+
+
+.Record {
+    width: 29%;
+    height: auto;
+    position: relative;
+    top: min(-144rem, -120.8vw);
+    left: min(-6rem, -5vw);
+    z-index: 2;
+}
+
+.Cosmic {
+    width: max(33vw, 40rem);
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-201.6rem, -168.6vw);
+    left: max(4.2rem, 3.6vw);
+}
+
+.Stars {
+    width: max(24rem, 20vw);
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-233rem, -195vw);
+    left: max(21rem, 17.5vw);
+    margin: 0;
+    z-index: 4;
+}
+
+.CEL {
+    width: max(5rem, 4vw);
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-300rem, -249.6vw);
+    margin-left: auto;
+    right: 1rem;
+    z-index: 4;
+}
+
+.Battery02 {
+    width: max(3.5rem, 3vw);
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-245rem, -204.2vw);
+    margin-left: auto;
+    right: max(45rem, 37.7vw);
+    z-index: 4;
+}
+
+.TirePressure {
+    width: max(3rem, 2.5vw);
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-243.8rem, -203.5vw);
+    margin-left: auto;
+    right: max(45.3rem, 38vw);
+    z-index: 4;
+}
+
+.Airbag {
+    width: max(3rem, 2.5vw);
+    height: auto;
+    display: block;
+    position: relative;
+    top: min(-242.8rem, -203vw);
+    margin-left: auto;
+    right: max(45.3rem, 38vw);
+    z-index: 4;
+}
+
+.XOX {
+    color: var(--SoftRed);
+    font-family: 'Title', sans-serif;
+    font-size: max(100px, 5.2vw);
+    line-height: .6;
+    text-align: right;
+    position: relative;
+    top: min(-256.5rem, -213.5vw);
+    right: max(1rem, 1vw);
+    z-index: 4;
+}
+
+.XOXO {
+    color: var(--EngineOrange);
+    font-family: 'Title', sans-serif;
+    font-size: max(100px, 5.2vw);
+    line-height: .6;
+    text-align: right;
+    position: relative;
+    top: min(-256.6rem, -213vw);
+    right: max(1rem, 1vw);
+    z-index: 4;
+}
+
+.XOXOX {
+    color: var(--GrungeYellow);
+    font-family: 'Title', sans-serif;
+    font-size: max(100px, 5.2vw);
+    line-height: .6;
+    text-align: right;
+    position: relative;
+    top: min(-256.7rem, -212.5vw);
+    right: max(1rem, 1vw);
+    z-index: 4;
+}
+
+.SCAD {
+    color: var(--GrungeGreen);
+    font-family: 'Paragraph';
+    font-size: max(75px, 4vw);
+    position: relative;
+    text-align: right;
+    top: min(-261.1rem, -216.5vw);
+    right: max(36rem, 30vw);
+    z-index: 4;
+    transform: scaleX(.8)
+}
+
+.Email {
+    color: var(--SoftRed);
+    font-family: 'Paragraph';
+    font-size: max(40px, 2.08vw);
+    position: relative;
+    text-align: right;
+    top: min(-271rem, -225vw);
+    right: max(1rem, 1vw);
+    z-index: 4;
+}
+
+.Copyright {
+    color: var(--SoftRed);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.45vw);
+    position: relative;
+    text-align: right;
+    top: min(-273.8rem, -227.2vw);
+    right: max(1rem, 1vw);
+    z-index: 4;
+}
