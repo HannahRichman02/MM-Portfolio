@@ -1,5 +1,6 @@
 <script>
     import '$lib/styles/contentcard.css'
+    import { getGifVersion, restartGif } from '$lib/styles/evenmore.svelte.ts';
 </script>
 <div class="Header">
     <p class="Welcome">WELCOME IN</p>
@@ -27,13 +28,20 @@
     <img src="/Images/Planet.png" class="Planet" alt=Planet>
 </div>
 <div class="LivingSpaces">
-    <img src="/Images/Living_Spaces_Title.png" class="LS_Title" alt="Living Spaces" >
+    <a href="/LivingSpaces">
+        <img src="/Images/Living_Spaces_Title.png" class="LS_Title" alt="Living Spaces" >
+    </a>
     <img src="/Images/Living_Spaces_Light.png" class="LS_Light01" alt="Living Spaces Echo 1">
     <img src="/Images/Living_Spaces_Light.png" class="LS_Light02" alt="Living Spaces Echo 2">
     <img src="/Images/Living_Spaces_Light.png" class="LS_Light03" alt="Living Spaces Echo 3">
     <img src="/Images/Living_Spaces_Light.png" class="LS_Light04" alt="Living Spaces Echo 4">
     <img src="/Images/Living_Spaces_Light.png" class="LS_Light05" alt="Living Spaces Echo 5">
-    <img src="/Images/Living_Spaces_SC.png" class="LS_SC" alt="Living Spaces Thumbnail">
+    <div class="LS-gif-container">
+        {#key getGifVersion('bedroom')}
+            <img src="/Images/Bedroom_GIF_Small.gif" class="LS_GIF" alt="Living Spaces Gif" onmouseover={() => restartGif('bedroom')} onfocus={() => restartGif('bedroom')}/>
+        {/key}
+        <img src="/Images/Living_Spaces_SC.png" class="LS_SC" alt="Living Spaces Thumbnail">
+    </div>
     <img src="/Images/Stars_v01.png" class="Stars_01" alt="Stars Contained">
     <p class="Household">HOUSEHOLD</p>
     <img src="/Images/Nokia.png" class="Nokia" alt="Nokia">

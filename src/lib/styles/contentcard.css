@@ -166,6 +166,8 @@ Beginning of the HEADER div
     overflow-anchor: auto;
 }
 
+
+
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Beginning of the LIVING SPACES div
@@ -189,6 +191,7 @@ max-height: 462px
     left: max(.5rem, .4vw);
     width: max(55rem, 46vw);
     height: auto;
+    z-index: 1;
 }
 
 .LS_Light01 {
@@ -240,15 +243,40 @@ max-height: 462px
     opacity: .2;
 }
 
+.LS-gif-container {
+    background-color: var(--EngineOrange);
+    display: block;
+    position: relative;
+    top: min(-86.7rem, -72.4vw);
+    width: max(48rem, 40.1vw);
+    height: max(28rem, 23.4vw);
+    margin-left: auto;
+    right: max(1rem, 1vw);
+}
+
+.LS-gif-container:hover .LS_SC {
+    opacity: 0;
+}
+
 .LS_SC {
     position: relative;
     display: block;
     margin-left: auto;
     right: max(1rem, 1vw);
-    top: min(-86.3rem, -72.1vw);
     width: max(48rem, 40.1vw);
     height: auto;
     border: max(.5rem, .4vw) solid var(--SoftRed);
+    z-index: 1;
+    top: -28.05rem;
+}
+
+.LS_GIF {
+    position: relative;
+    display: block;
+    width: max(48rem, 40.1vw);
+    height: auto;
+    right: max(1rem, 1vw);
+    border: max(.5rem, .4vw) solid var(--GrungeGreen);
 }
 
 .Stars_01 {
@@ -537,7 +565,7 @@ Beginning of the LOGO MANIA div
 .GhostlyRose {
     position: relative;
     display: block;
-    width: 42rem;
+    width: max(42rem, 35vw);
     height: auto;
     left: max(1rem, .8vw);
     top: max(1rem, .8vw);
@@ -627,11 +655,11 @@ Beginning of the LOGO MANIA div
 .SearchBar {
     position: relative;
     display: block;
-    top: -84.5rem;
+    top: min(-84.5rem, -70.5vw);
     margin-left: auto;
-    width: 28rem;
+    width: max(28rem, 23.3vw);
     height: auto;
-    right: 1rem;
+    right: max(1rem, .8vw);
 }
 
 .Branding {
@@ -639,28 +667,28 @@ Beginning of the LOGO MANIA div
     display: block;
     text-align: right;
     font-family: 'Paragraph';
-    font-size: 27px;
+    font-size: max(27px, 1.4vw);
     color: var(--GrungeGreen);
-    right: 2.2rem;
-    top: -89.5rem;
+    right: max(2.2rem, 1.8vw);
+    top: min(-89.5rem, -74.6vw);
 }
 
 .GradientBar {
     position: relative;
     display: block;
     margin-left: auto;
-    right: 1rem;
-    top: -89.8rem;
-    width: 50rem;
+    right: max(1rem, .8vw);
+    top: min(-89.8rem, -74.8vw);
+    width: max(50rem, 41.6vw);
     height: auto;
 }
 
 .FluffWords {
     position: relative;
     display: block;
-    left: 46.2rem;
-    top: -103.3rem;
-    font-size: 30px;
+    left: max(46.2rem, 38.5vw);
+    top: min(-103.3rem, -86.1vw);
+    font-size: max(30px, 1.5vw);
     font-family: 'Paragraph';
     color: var(--DeepBrown);
 }
