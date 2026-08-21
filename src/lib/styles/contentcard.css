@@ -19,7 +19,10 @@
     --GrungeYellow: rgb(147,107,37);
     --EngineOrange: rgb(200,104,41);
     --SoftRed: rgb(138,52,40);
+    --BrightYellow: rgb(251, 224, 111);
 }
+
+
 
 html {
     scroll-behavior: smooth;
@@ -150,7 +153,7 @@ Beginning of the HEADER div
     border-radius: 20px; 
     padding: max(10px, .5vw);
     padding-block: max(16px, .8vw);
-    width: max(5.7rem, 4.7vw);
+    width: max(7.6rem, 6.3vw);
     text-decoration: none;
 }
 
@@ -166,7 +169,21 @@ Beginning of the HEADER div
     overflow-anchor: auto;
 }
 
+.BarGraphTop {
+    position: relative;
+    display: block;
+    top: -48rem;
+    margin-left: auto;
+    right: max(1rem, .8vw);
+}
 
+.BarGraphBottom {
+    position: relative;
+    display: block;
+    top: -48.5rem;
+    margin-left: auto;
+    right: max(1rem, .8vw);
+}
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -180,10 +197,6 @@ Beginning of the LIVING SPACES div
     overflow: hidden;
 }
 
-/*
-max-height: 462px
-*/
-
 .LS_Title {
     position: relative;
     display: block;
@@ -192,6 +205,8 @@ max-height: 462px
     width: max(55rem, 46vw);
     height: auto;
     z-index: 1;
+    transition: filter 0.5s ease-in-out;
+    
 }
 
 .LS_Light01 {
@@ -201,6 +216,7 @@ max-height: 462px
     left: max(.4rem, .3vw);
     width: max(55rem, 46vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .LS_Light02 {
@@ -211,6 +227,7 @@ max-height: 462px
     width: max(55rem, 46vw);
     height: auto;
     opacity: .8;
+    transition: filter 0.5s ease-in-out;
 }
 
 .LS_Light03 {
@@ -221,6 +238,7 @@ max-height: 462px
     width: max(55rem, 46vw);
     height: auto;
     opacity: .6;
+    transition: filter 0.5s ease-in-out;
 }
 
 .LS_Light04 {
@@ -231,6 +249,7 @@ max-height: 462px
     width: max(55rem, 46vw);
     height: auto;
     opacity: .4;
+    transition: filter 0.5s ease-in-out;
 }
 
 .LS_Light05 {
@@ -241,10 +260,11 @@ max-height: 462px
     width: max(55rem, 46vw);
     height: auto;
     opacity: .2;
+    transition: filter 0.5s ease-in-out;
 }
 
 .LS-gif-container {
-    background-color: var(--EngineOrange);
+    background-color: var(--DeepBrown);
     display: block;
     position: relative;
     top: min(-86.7rem, -72.4vw);
@@ -268,6 +288,7 @@ max-height: 462px
     border: max(.5rem, .4vw) solid var(--SoftRed);
     z-index: 1;
     top: -28.05rem;
+    transition: border 0.5s ease-in-out;
 }
 
 .LS_GIF {
@@ -276,7 +297,8 @@ max-height: 462px
     width: max(48rem, 40.1vw);
     height: auto;
     right: max(1rem, 1vw);
-    border: max(.5rem, .4vw) solid var(--GrungeGreen);
+    border: max(.5rem, .4vw) solid var(--SoftRed);
+    transition: border 0.5s ease-in-out;
 }
 
 .Stars_01 {
@@ -286,6 +308,7 @@ max-height: 462px
     left: max(55.5rem, 46.4vw);
     width: max(7.3rem, 6.1vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .Household {
@@ -299,6 +322,7 @@ max-height: 462px
     z-index: 2;
     margin: 0;
     rotate: 90deg;
+    transition: color 0.5s ease-in-out;
 }
 
 .Nokia {
@@ -307,6 +331,7 @@ max-height: 462px
     top: min(-126rem, -105.1vw);
     left: max(.5rem, .2vw);
     width: max(10rem, 8.3vw);
+    transition: filter 0.5s ease-in-out;
 }
 
 .Play_Bar {
@@ -316,6 +341,7 @@ max-height: 462px
     left: max(40.3rem, 33.7vw);
     width: max(15rem, 12.5vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .Blender {
@@ -332,6 +358,7 @@ max-height: 462px
     width: max(21.15rem, 17.6vw);
     padding-inline: max(4px, .2vw);
     border-radius: max(5px, .3vw);
+    transition: background-color 0.5s ease-in-out;
 }
 
 .W {
@@ -344,7 +371,8 @@ max-height: 462px
     color: var(--SoftRed);
     letter-spacing: max(.7rem, .6vw);
     z-index: 3;
-    transform: scaleX(1.5)
+    transform: scaleX(1.5);
+    transition: color 0.5s ease-in-out;
 }
 
 .Satisfaction {
@@ -357,6 +385,7 @@ max-height: 462px
     color: var(--EngineOrange);
     z-index: 3;
     rotate: 90deg;
+    transition: color 0.5s ease-in-out;
 }
 
 .Years {
@@ -368,6 +397,7 @@ max-height: 462px
     font-size: max(20px, 1vw);
     color: var(--EngineOrange);
     z-index: 3;
+    transition: color 0.5s ease-in-out;
 }
 
 .Line-Graph {
@@ -381,25 +411,11 @@ max-height: 462px
     transform: scaleY(.36842105263157894736842105263158)
 }
 
-.data-point {
-    background-color: var(--EngineOrange);
-    border-radius: 50%;
-    height: max(13px, .7vw);
-    width: max(5px, .25vw);
-    position: absolute;
-    bottom: calc(var(--y) - .2vw);
-    left: calc(var(--x) - .1vw);
-}
-
-.line-segment {
-    background-color: var(--EngineOrange);
-    bottom: var(--y);
-    height: max(2px, .08vw);
-    left: var(--x);
-    position: absolute;
-    transform: rotate(calc(var(--angle) * 1deg));
-    transform-origin: left bottom;
-    width: calc(var(--hypotenuse) * 1%);
+.LineGraphJS {
+    position: relative;
+    display: block;
+    top: -193rem;
+    left: 13rem;
 }
 
 /*
@@ -421,6 +437,7 @@ Beginning of the SLEEPLESS NIGHT div
     width: max(46rem, 38.3vw);
     height: auto;
     border: max(.5rem, .4vw) solid var(--EngineOrange); 
+    transition: border 0.5s ease-in-out;
 }
 
 .Sleepless {
@@ -432,6 +449,7 @@ Beginning of the SLEEPLESS NIGHT div
     font-size: max(200px, 10.4vw);
     color: var(--GrungeGreen);
     transform: scaleX(.395);
+    transition: color 0.5s ease-in-out;
 }
 
 .Night {
@@ -443,6 +461,7 @@ Beginning of the SLEEPLESS NIGHT div
     font-size: max(200px, 10.4vw);
     color: var(--GrungeYellow);
     transform: scaleX(.395);
+    transition: color 0.5s ease-in-out
 }
 
 .Stars_Line {
@@ -452,6 +471,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(80.8rem, 67.4vw);
     width: max(26rem, 21.5%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .Cosmic_Swirl {
@@ -463,6 +483,7 @@ Beginning of the SLEEPLESS NIGHT div
     height: auto;
     right: max(1rem, .9vw);
     border: max(.5rem, .4vw) solid var(--EngineOrange);
+    transition: filter 0.5s ease-in-out;
 }
 
 .Chevron {
@@ -472,6 +493,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(48rem, 40vw);
     width: max(60rem, 50%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .ButtonTimer {
@@ -481,6 +503,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(48.5rem, 40.4vw);
     width: max(4.8rem, 4%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .ButtonBedTime {
@@ -490,6 +513,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(54rem, 45vw);
     width: max(4.8rem, 4%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .ButtonMoon {
@@ -499,6 +523,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(59.5rem, 49.6vw);
     width: max(4.8rem, 4%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .ButtonLock {
@@ -508,6 +533,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(65rem, 54.2vw);
     width: max(4.8rem, 4%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .ButtonWifi {
@@ -517,6 +543,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(70.5rem, 58.8vw);
     width: max(4.8rem, 4%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .ButtonCellular {
@@ -526,6 +553,7 @@ Beginning of the SLEEPLESS NIGHT div
     left: max(76rem, 63.4vw);
     width: max(4.8rem, 4%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .SN_Description {
@@ -537,7 +565,8 @@ Beginning of the SLEEPLESS NIGHT div
     font-size: max(30px, 1.5vw);
     color: var(--GrungeGreen);
     line-height: 1;
-    transform: scaleX(.95)
+    transform: scaleX(.95);
+    transition: color 0.5s ease-in-out
 }
 
 .Planet {
@@ -548,6 +577,7 @@ Beginning of the SLEEPLESS NIGHT div
     right: max(1.8rem, 1.6vw);
     width: max(24.4rem, 20.3%);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 /*
@@ -570,6 +600,7 @@ Beginning of the LOGO MANIA div
     left: max(1rem, .8vw);
     top: max(1rem, .8vw);
     border: max(.5rem, .4vw) solid var(--EngineOrange);
+    transition: border 0.5s ease-in-out;
 }
 
 .BarLines {
@@ -580,6 +611,7 @@ Beginning of the LOGO MANIA div
     margin-left: auto;
     right: max(1rem, .8vw);
     top: min(-29.1rem, -24.2vw);
+    transition: filter 0.5s ease-in-out;
     
 }
 
@@ -592,6 +624,8 @@ Beginning of the LOGO MANIA div
     left: max(44.5rem, 37vw);
     top: min(-34rem, -28.3vw);
     transform: scaleY(2);
+    transition: color 0.5s ease-in-out;
+    
 }
 
 .Mania {
@@ -604,6 +638,7 @@ Beginning of the LOGO MANIA div
     color: var(--EngineOrange);
     text-align: right;
     right: max(1.3rem, 1.1vw);
+    transition: color 0.5s ease-in-out;
 }
 
 .Arrows {
@@ -613,6 +648,7 @@ Beginning of the LOGO MANIA div
     top: min(-53rem, -44.1vw);
     width: max(24rem, 20vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .Rectangles {
@@ -622,6 +658,7 @@ Beginning of the LOGO MANIA div
     left: max(45rem, 37.5vw);
     width: max(24rem, 20vw);
     height: max(12.5rem, 10.4vw);
+    transition: filter 0.5s ease-in-out;
 }
 
 .RRectangles {
@@ -631,6 +668,7 @@ Beginning of the LOGO MANIA div
     left: max(69rem, 57.5vw);
     width: max(22rem, 18.3vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .Checkers {
@@ -640,6 +678,7 @@ Beginning of the LOGO MANIA div
     left: max(69rem, 57.5vw);
     width: max(22rem, 18.3vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .Swirlies {
@@ -650,6 +689,7 @@ Beginning of the LOGO MANIA div
     right: max(1rem, .8vw);
     width: max(27.8rem, 23.2vw);
     height: max(9.3rem, 7.7vw);
+    transition: filter 0.5s ease-in-out;
 }
 
 .SearchBar {
@@ -660,6 +700,7 @@ Beginning of the LOGO MANIA div
     width: max(28rem, 23.3vw);
     height: auto;
     right: max(1rem, .8vw);
+    transition: filter 0.5s ease-in-out;
 }
 
 .Branding {
@@ -671,6 +712,7 @@ Beginning of the LOGO MANIA div
     color: var(--GrungeGreen);
     right: max(2.2rem, 1.8vw);
     top: min(-89.5rem, -74.6vw);
+    transition: color 0.5s ease-in-out;
 }
 
 .GradientBar {
@@ -681,6 +723,7 @@ Beginning of the LOGO MANIA div
     top: min(-89.8rem, -74.8vw);
     width: max(50rem, 41.6vw);
     height: auto;
+    transition: filter 0.5s ease-in-out;
 }
 
 .FluffWords {
@@ -740,6 +783,7 @@ Beginning of the PROFILE div
     margin: 0;
     transform: scaleY(.9);
     z-index: 4;
+    transition: color 0.5s ease-in-out;
 }
 
 .ContactLN {
@@ -751,7 +795,8 @@ Beginning of the PROFILE div
     top: min(-59rem, -50.5vw);
     left: max(1rem, 1vw);
     margin: 0;
-    transform: scaleY(.8)
+    transform: scaleY(.8);
+    transition: color 0.5s ease-in-out;
 }
 
 .StarLine {
@@ -774,6 +819,7 @@ Beginning of the PROFILE div
     top: min(-62.5rem, -53.3vw);
     left: max(1.3rem, 1.02vw);
     margin: 0;
+    transition: color 0.5s ease-in-out;
 }
 
 .Banner {
@@ -960,6 +1006,7 @@ Beginning of the PROFILE div
     top: min(-271rem, -225vw);
     right: max(1rem, 1vw);
     z-index: 4;
+    transition: color 0.5s ease-in-out;
 }
 
 .Copyright {
@@ -971,4 +1018,52 @@ Beginning of the PROFILE div
     top: min(-273.8rem, -227.2vw);
     right: max(1rem, 1vw);
     z-index: 4;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Overrides
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+.highlight {
+    color: var(--BrightYellow);
+    transition: color 0.5s ease-in-out;
+}
+
+.highlightorange {
+    filter: hue-rotate(22deg) saturate(55%) brightness(160%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.highlightred {
+    filter: hue-rotate(48deg) saturate(52%) brightness(270%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.highlightyellow {
+    filter: saturate(70%) brightness(200%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.highlightgreen {
+    filter: hue-rotate(-10deg) saturate(70%) brightness(200%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.highlightborder {
+    border: max(.5rem, .4vw) solid var(--BrightYellow);
+    transition: border 0.5s ease-in-out
+}
+
+.highlightyellowBG {
+    background-color: var(--BrightYellow);
+    transition: background-color 0.5s ease-in-out
+}
+
+.highlightLG {
+    border-bottom: max(7px, .3vw) solid var(--BrightYellow);
+    border-left: max(3px, .1vw) solid var(--BrightYellow);
+    transition: border 0.5s ease-in-out
 }
