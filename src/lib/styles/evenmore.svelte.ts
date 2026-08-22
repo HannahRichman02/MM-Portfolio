@@ -24,6 +24,9 @@ function getGifVersion(which: string): number {
 
 export {getGifVersion, restartGif, lightScroll}
 
+let linePointsColor = $state("rgba(200,104,41,1)");
+let lineLineColor = $state("rgba(200,104,41,1)");
+
 let workHighlights = $state({
     first: false,
     second: false,
@@ -58,6 +61,8 @@ async function lightScroll(location: string) {
     switch(location) {
         case 'Work':
             workHighlights.first = true;
+            lineLineColor = "rgba(251, 224, 111)";
+            linePointsColor = "rgba(251, 224, 111)";
             await setTimeout(() => {workHighlights.second = true;}, 150)
             await setTimeout(() => {workHighlights.third = true;}, 300)
             await setTimeout(() => {workHighlights.fourth = true;}, 450)
@@ -113,4 +118,13 @@ export function getLightClass(location: String, which: String) {
     }
 }
 
-
+export function getChartColor(chart: String, which: String) {
+    switch (chart) {
+        case 'bar_top':
+            return
+        case 'bar_bot':
+            return
+        case 'line':
+            return which == "points" ? linePointsColor : lineLineColor
+    }
+}

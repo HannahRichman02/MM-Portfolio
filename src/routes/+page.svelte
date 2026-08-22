@@ -1,6 +1,6 @@
 <script lang=es>
     import '$lib/styles/contentcard.css'
-    import { getGifVersion, restartGif,  getLightClass, lightScroll } from '$lib/styles/evenmore.svelte.ts';
+    import { getGifVersion, restartGif,  getLightClass, lightScroll, getChartColor } from '$lib/styles/evenmore.svelte.ts';
     import { onMount } from 'svelte';
     import Chart from 'chart.js/auto';
 
@@ -22,30 +22,35 @@
     });})
     
     const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-    const yValues = [2, 5, 3, 4, 9, 2, 8, 7, 1, 3, 6, 8, 4];
+    let yValues = $state([2, 5, 3, 4, 9, 2, 8, 7, 1, 3, 6, 8, 4]);
 
          /**
          * @type {HTMLButtonElement | null}
          */
     let top = null;
+    /**
+     * @type {Chart<"bar", number[], number>}
+     */
+    let topGraph;
 
     onMount (() => {
             if (top == null) {
                return
            }
-        new Chart(top, {
+        topGraph = new Chart(top, {
             type: "bar",
             data: {
                 labels: xValues,
                 datasets: [{
                    backgroundColor: "rgba(117,107,35,1)",
-                   data: yValues
+                   data: $state.snapshot(yValues),
                }]
            },
         options: {
             plugins: {
                 legend: {display: false},
                 title: {display: false},
+                tooltip: {enabled: false},
             },
             scales: {
                 x: {
@@ -65,30 +70,36 @@
 
 
     const zValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-    const wValues = [2, 5, 3, 4, 9, 2, 8, 7, 1, 3, 6, 8, 4];
+    let wValues = [2, 5, 3, 4, 9, 2, 8, 7, 1, 3, 6, 8, 4];
 
          /**
          * @type {HTMLButtonElement | null}
          */
     let bot = null;
 
+    /**
+     * @type {Chart<"bar", number[], number>}
+     */
+    let botGraph;
+
     onMount (() => {
             if (bot == null) {
                return
            }
-        new Chart(bot, {
+        botGraph = new Chart(bot, {
             type: "bar",
             data: {
                 labels: zValues,
                 datasets: [{
                    backgroundColor: "rgba(117,107,35,1)",
-                   data: wValues
+                   data: $state.snapshot(wValues)
                }]
            },
         options: {
             plugins: {
                 legend: {display: false},
                 title: {display: false},
+                tooltip: {enabled: false},
             },
             scales: {
                 x: {
@@ -107,33 +118,39 @@
     });
 
     const tValues = [9, 18, 27, 36, 45, 54, 63, 72, 81, 90];
-    const vValues = [25, 35, 60, 40, 55, 10, 20, 75, 50, 30];
+    let vValues = $state([25, 35, 60, 40, 55, 10, 20, 75, 50, 30]);
 
          /**
          * @type {HTMLButtonElement | null}
          */
     let line = null;
 
+    /**
+     * @type {{ update: () => void; } | null}
+     */
+    let lineChart;
+
     onMount (() => {
         if (line == null) {
             return
         }
-        new Chart(line, {
+        lineChart = new Chart(line, {
             type: "line",
             data: {
                 labels: tValues,
                 datasets: [{
                     fill: false,
                     lineTension: 0,
-                    backgroundColor: "rgba(200,104,41,1)",
-                    borderColor: "rgba(200,104,41,1)",
-                    data: vValues,
+                    backgroundColor: getChartColor("line", "points"),
+                    borderColor: getChartColor("line", "lines"),
+                    data: $state.snapshot(vValues),
                 }]
             },
             options: {
                 plugins: {
                     legend: {display: false},
                     title: {display: false},
+                    tooltip: {enabled: false},
                 },
                 scales: {
                     x: {
@@ -151,7 +168,68 @@
         })
     })
 
-  
+    $effect(() => {
+        const rawData = $state.snapshot(vValues);
+
+        const rawLineColor = getChartColor("line", "lines");
+        const rawPointColor = getChartColor("line", "points");
+
+        if (lineChart) {
+            lineChart.data.datasets[0].data = rawData;
+
+            lineChart.data.datasets[0].backgroundColor = rawLineColor;
+            lineChart.data.datasets[0].borderColor = rawLineColor;
+
+            lineChart.update('none');
+
+            lineChart.data.datasets[0].pointBackgroundColor = rawPointColor;
+            lineChart.data.datasets[0].pointBorderColor = rawPointColor;
+
+            lineChart.update();
+        }
+
+        if (topGraph && botGraph ) {
+            const barTopRawData = $state.snapshot(yValues);
+            const barBotRawData = $state.snapshot(wValues);
+
+            topGraph.data.datasets[0].data = barTopRawData;
+            botGraph.data.datasets[0].data = barBotRawData;
+
+            topGraph.update();
+            botGraph.update();
+        }
+    })
+
+    /**
+     * @param {number} min
+     * @param {number} max
+     */
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function randomizeWholeArray() {
+        let array = vValues
+        for (let index = 0; index < array.length; index++) {
+            array[index] = getRandomInt(10, 75)
+        }
+        vValues = array
+    }
+
+    /**
+     * @param {number[]} which
+     */
+    function randomizePointArray(which) {
+        let array = which
+        let index = getRandomInt(0, array.length - 1)
+        array[index] = getRandomInt(1, 9)
+        which = array
+    }
+
+    const intervalLine = setInterval(randomizeWholeArray, 1500);
+    const intervalBarBot = setInterval(() => randomizePointArray(yValues), 500);
+    const intervalBarTop = setInterval(() => randomizePointArray(wValues), 500);
+
 </script>
 <div class="Header">
     <p class="Welcome">WELCOME IN</p>
