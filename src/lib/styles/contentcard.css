@@ -1,28 +1,3 @@
-@font-face {
-    font-family: 'Barcode';
-    src: url($lib/Fonts/LibreBarcode39Text-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Title';
-    src: url($lib/Fonts/BBHBartle-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Paragraph';
-    src: url($lib/Fonts/ZenDots-Regular.ttf) format('truetype');
-}
-
-:root {
-    --DeepBrown: rgb(28,8,1);
-    --GrungeGreen: rgb(117,107,35);
-    --GrungeYellow: rgb(147,107,37);
-    --EngineOrange: rgb(200,104,41);
-    --SoftRed: rgb(138,52,40);
-    --BrightYellow: rgb(251, 224, 111);
-}
-
-
 
 html {
     scroll-behavior: smooth;
@@ -88,10 +63,18 @@ Beginning of the HEADER div
     top: min(-30rem, -25vw);
 }
 
+.Buttons {
+    position: relative;
+    display: block;
+    height: max(4rem, 3.3vw);
+    margin-left: auto;
+    width: max(24.5rem, -20.5vw);
+    top: min(-46.5rem, -38.9vw);
+}
+
 .Work {
     position: relative;
     display: block;
-    top: min(-46.3rem, -38.5vw);
     margin-left: auto;
     right: max(16.8rem, 14vw);
     background-color: var(--DeepBrown);
@@ -114,8 +97,8 @@ Beginning of the HEADER div
 .About {
     position: relative;
     display: block;
-    top: min(-50.1rem, -41.5vw);
     margin-left: auto;
+    top: min(-3.9rem, -3vw);
     right: max(9.05rem,7.5vw);
     background-color: var(--GrungeGreen);
     color: var(--DeepBrown);
@@ -142,8 +125,8 @@ Beginning of the HEADER div
 .Contact {
     position: relative;
     display: block;
-    top: min(-53.95rem, -44.5vw);
     margin-left: auto;
+    top: min(-7.7rem, -6vw);
     right: max(1rem, .8vw);
     background-color: var(--DeepBrown);
     color: var(--GrungeGreen);
@@ -172,17 +155,27 @@ Beginning of the HEADER div
 .BarGraphTop {
     position: relative;
     display: block;
-    top: -48rem;
     margin-left: auto;
-    right: max(1rem, .8vw);
+    width: 100% !important;
 }
 
 .BarGraphBottom {
     position: relative;
     display: block;
-    top: -48.5rem;
     margin-left: auto;
-    right: max(1rem, .8vw);
+    width: 100% !important;
+}
+
+
+.BarGraphs {
+    position: relative;
+    display: block;
+    top: min(-40.5rem, -33.9vw);
+    right: max(1rem, .1vw);
+    transform: scaleY(.9);
+    width: max(285px, 14.84vw);
+    height: max(100px, 5.21vw);
+    margin-left: auto;
 }
 
 /*
@@ -207,6 +200,10 @@ Beginning of the LIVING SPACES div
     z-index: 1;
     transition: filter 0.5s ease-in-out;
     
+}
+
+.LS_Title:hover {
+    filter: hue-rotate(-10deg) saturate(70%) brightness(200%);
 }
 
 .LS_Light01 {
@@ -297,7 +294,7 @@ Beginning of the LIVING SPACES div
     width: max(48rem, 40.1vw);
     height: auto;
     right: max(1rem, 1vw);
-    border: max(.5rem, .4vw) solid var(--SoftRed);
+    border: max(.5rem, .4vw) solid var(--BrightYellow);
     transition: border 0.5s ease-in-out;
 }
 
@@ -408,7 +405,8 @@ Beginning of the LIVING SPACES div
     left: max(9.2rem, 7.6vw);
     border-bottom: max(7px, .3vw) solid var(--EngineOrange);
     border-left: max(3px, .1vw) solid var(--EngineOrange);
-    transform: scaleY(.36842105263157894736842105263158)
+    transform: scaleY(.36842105263157894736842105263158);
+    transition: border 0.5s ease-in-out;
 }
 
 .LineGraphJS {

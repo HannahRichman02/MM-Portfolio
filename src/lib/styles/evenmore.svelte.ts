@@ -61,8 +61,6 @@ async function lightScroll(location: string) {
     switch(location) {
         case 'Work':
             workHighlights.first = true;
-            lineLineColor = "rgba(251, 224, 111)";
-            linePointsColor = "rgba(251, 224, 111)";
             await setTimeout(() => {workHighlights.second = true;}, 150)
             await setTimeout(() => {workHighlights.third = true;}, 300)
             await setTimeout(() => {workHighlights.fourth = true;}, 450)
@@ -71,6 +69,8 @@ async function lightScroll(location: string) {
             await setTimeout(() => {workHighlights.seventh = true;}, 900)
             await setTimeout(() => {workHighlights.first = false;}, 1000)
             await setTimeout(() => {workHighlights.eighth = true;}, 1050)
+            await setTimeout(() => {lineLineColor = "rgba(251, 224, 111)";}, 1050)
+            await setTimeout(() => {linePointsColor = "rgba(251, 224, 111)";}, 1050)
             await setTimeout(() => {workHighlights.second = false;}, 1150)
             await setTimeout(() => {workHighlights.ninth = true;}, 1200)
             await setTimeout(() => {workHighlights.third = false;}, 1300)
@@ -84,6 +84,8 @@ async function lightScroll(location: string) {
             await setTimeout(() => {workHighlights.seventh = false;}, 1900)
             await setTimeout(() => {workHighlights.fourteenth = true;}, 1950)
             await setTimeout(() => {workHighlights.eighth = false;}, 2050)
+            await setTimeout(() => {lineLineColor = "rgba(200,104,41,1)";}, 2050)
+            await setTimeout(() => {linePointsColor = "rgba(200,104,41,1)";}, 2050)
             await setTimeout(() => {workHighlights.ninth = false;}, 2200)
             await setTimeout(() => {workHighlights.tenth = false;}, 2350)
             await setTimeout(() => {workHighlights.eleventh = false;}, 2500)

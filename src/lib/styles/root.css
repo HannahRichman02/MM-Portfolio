@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Barcode';
+    src: url($lib/Fonts/LibreBarcode39Text-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Title';
+    src: url($lib/Fonts/BBHBartle-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Paragraph';
+    src: url($lib/Fonts/ZenDots-Regular.ttf) format('truetype');
+}
+
+:root {
+    --DeepBrown: rgb(28,8,1);
+    --GrungeGreen: rgb(117,107,35);
+    --GrungeYellow: rgb(147,107,37);
+    --EngineOrange: rgb(200,104,41);
+    --SoftRed: rgb(138,52,40);
+    --BrightYellow: rgb(251, 224, 111);
+}

@@ -47,6 +47,8 @@
                }]
            },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {display: false},
                 title: {display: false},
@@ -96,6 +98,8 @@
                }]
            },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {display: false},
                 title: {display: false},
@@ -177,10 +181,10 @@
         if (lineChart) {
             lineChart.data.datasets[0].data = rawData;
 
+            lineChart.update('none');
+
             lineChart.data.datasets[0].backgroundColor = rawLineColor;
             lineChart.data.datasets[0].borderColor = rawLineColor;
-
-            lineChart.update('none');
 
             lineChart.data.datasets[0].pointBackgroundColor = rawPointColor;
             lineChart.data.datasets[0].pointBorderColor = rawPointColor;
@@ -227,8 +231,8 @@
     }
 
     const intervalLine = setInterval(randomizeWholeArray, 1500);
-    const intervalBarBot = setInterval(() => randomizePointArray(yValues), 500);
-    const intervalBarTop = setInterval(() => randomizePointArray(wValues), 500);
+    const intervalBarBot = setInterval(() => randomizePointArray(yValues), 100);
+    const intervalBarTop = setInterval(() => randomizePointArray(wValues), 100);
 
 </script>
 <div class="Header">
@@ -236,13 +240,17 @@
     <img src="/Images/Header_Trip.png" class="HeaderTrip" alt="Header Trip">
     <img src="/Images/Header_Bar.png" class="HeaderBar" alt="Header Bar">
     <img src="/Images/HR_Header.png" class="NameTitle" alt="Hannah Richman">
-    <a href=#Work_Section class="Work" onmousedown={() => lightScroll("Work")}>Work</a>
-    <a href=#About_Section class="About" onmousedown={() => lightScroll("About")}>About</a>
-    <button class="Contact" bind:this={contactButton}>Contact</button>
-    <canvas bind:this={top} class="BarGraphTop" style="width: 100%;max-width:285px; height:100%;max-height:100px">
-    </canvas>
-    <canvas bind:this={bot} class="BarGraphBottom" style="width: 100%;max-width:285px; height:100%;max-height:100px">
-    </canvas>
+    <div class="Buttons">
+        <a href=#Work_Section class="Work" onmousedown={() => lightScroll("Work")}>Work</a>
+        <a href=#About_Section class="About" onmousedown={() => lightScroll("About")}>About</a>
+        <button class="Contact" bind:this={contactButton}>Contact</button>
+    </div>
+    <div class="BarGraphs">
+        <canvas bind:this={top} class="BarGraphTop" width="285">
+        </canvas>
+        <canvas bind:this={bot} class="BarGraphBottom">
+        </canvas>
+    </div>
 </div>
 <div class="sleepless-night" id="Work_Section">
     <img src="/Images/Sleepless_Nights_SC.png" class={`SNSC${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_Night">
