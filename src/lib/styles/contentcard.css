@@ -204,6 +204,7 @@ Beginning of the LIVING SPACES div
 
 .LS_Title:hover {
     filter: hue-rotate(-10deg) saturate(70%) brightness(200%);
+    transition: filter 0.25s ease-in-out;
 }
 
 .LS_Light01 {

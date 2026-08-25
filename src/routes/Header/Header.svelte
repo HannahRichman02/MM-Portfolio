@@ -1,14 +1,18 @@
 <script>
     import { onMount } from 'svelte';
     import Chart from 'chart.js/auto';
+    import {getRandomInt} from '$lib/utilities.svelte.ts';
 
-        const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    let {header_text, buttons } = $props();
+
+    const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     let yValues = $state([2, 5, 3, 4, 9, 2, 8, 7, 1, 3, 6, 8, 4]);
 
-         /**
-         * @type {HTMLButtonElement | null}
-         */
+     /**
+     * @type {HTMLButtonElement | null}
+     */
     let top = null;
+
     /**
      * @type {Chart<"bar", number[], number>}
      */
@@ -55,9 +59,9 @@
     const zValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     let wValues = [2, 5, 3, 4, 9, 2, 8, 7, 1, 3, 6, 8, 4];
 
-         /**
-         * @type {HTMLButtonElement | null}
-         */
+     /**
+     * @type {HTMLButtonElement | null}
+     */
     let bot = null;
 
     /**
@@ -115,34 +119,43 @@
         }
     })
 
-
     /**
-     * @param {number} min
-     * @param {number} max
+     * @param {number[]} which
      */
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+    function randomizePointArray(which) {
+        let array = which
+        let index = getRandomInt(0, array.length - 1)
+        array[index] = getRandomInt(1, 9)
+        which = array
     }
 
-    function randomizeWholeArray() {
-        let array = vValues
-        for (let index = 0; index < array.length; index++) {
-            array[index] = getRandomInt(10, 75)
-        }
-        vValues = array
-    }
+    const intervalBarBot = setInterval(() => randomizePointArray(yValues), 100);
+    const intervalBarTop = setInterval(() => randomizePointArray(wValues), 100);
 
 </script>
 
+
+{#snippet navButton(/** @type {boolean} */ isButton, /** @type {string} */ text, /** @type {string} */ location, /** @type {string} */ style, /** @type {any} */ func)}
+    {#if isButton}
+        <button class={style} onmousedown={func}>{text}</button>
+    {:else}
+            {#if func}
+                <a href={location} class={style} onmousedown={func}>{text}</a>
+            {:else}
+                <a href={location} class={style}>{text}</a>
+            {/if}
+    {/if}
+{/snippet}
+
 <div class="Header">
-    <p class="Welcome">WELCOME IN</p>
+    <p class="Welcome">{header_text}</p>
     <img src="/Images/Header_Trip.png" class="HeaderTrip" alt="Header Trip">
     <img src="/Images/Header_Bar.png" class="HeaderBar" alt="Header Bar">
     <img src="/Images/HR_Header.png" class="NameTitle" alt="Hannah Richman">
     <div class="Buttons">
-        <a href=#Work_Section class="Work" onmousedown={() => lightScroll("Work")}>Work</a>
-        <a href=#About_Section class="About" onmousedown={() => lightScroll("About")}>About</a>
-        <button class="Contact" bind:this={contactButton}>Contact</button>
+        {#each buttons as button}
+            {@render navButton(button.isButton, button.text, button.location, button.style, button.func)}
+        {/each}
     </div>
     <div class="BarGraphs">
         <canvas bind:this={top} class="BarGraphTop" width="285">

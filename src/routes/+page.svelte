@@ -1,27 +1,10 @@
 <script lang=es>
     import '$lib/styles/contentcard.css'
-    import { getGifVersion, restartGif,  getLightClass, lightScroll, getChartColor } from '$lib/styles/evenmore.svelte.ts';
+    import {getGifVersion, restartGif, getLightClass, getChartColor, lightScroll} from '$lib/styles/evenmore.svelte.ts';
+    import {getRandomInt} from '$lib/utilities.svelte.ts';
     import { onMount } from 'svelte';
     import Chart from 'chart.js/auto';
-    import Header from '$lib/routes/Header/Header.svelte';
-
-    /**
-     * @type {HTMLButtonElement | null}
-     */
-    let contactButton = null;
-
-    onMount (() => {
-        if (contactButton == null) {
-            return
-        }
-        contactButton.addEventListener('click', function(){
-        lightScroll('Contact')
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-        });
-    });})
-    
+    import Header from './Header/Header.svelte';
 
 
     const tValues = [9, 18, 27, 36, 45, 54, 63, 72, 81, 90];
@@ -98,22 +81,59 @@
 
 
 
-    /**
-     * @param {number[]} which
-     */
-    function randomizePointArray(which) {
-        let array = which
-        let index = getRandomInt(0, array.length - 1)
-        array[index] = getRandomInt(1, 9)
-        which = array
+    function randomizeWholeArray() {
+        let array = vValues
+        for (let index = 0; index < array.length; index++) {
+            array[index] = getRandomInt(10, 75)
+        }
+        vValues = array
     }
 
+
     const intervalLine = setInterval(randomizeWholeArray, 1500);
-    const intervalBarBot = setInterval(() => randomizePointArray(yValues), 100);
-    const intervalBarTop = setInterval(() => randomizePointArray(wValues), 100);
+
+
+    const workButton = {
+        isButton: false,
+        text: "Work",
+        location: "#Work_Section",
+        style: "Work",
+        func: () => lightScroll("Work"),
+    }
+
+    const aboutButton = {
+        isButton: false,
+        text: "About",
+        location: "#About_Section",
+        style: "About",
+        func: () => lightScroll("About"),
+    }
+
+
+    /**
+     * @param {any} e
+     */
+    function contactButtonClick () {
+        lightScroll('Contact')
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        })
+    }
+
+
+    const contactButton = {
+        isButton: true,
+        text: "Contact",
+        location: null,
+        style: "Contact",
+        func: () => contactButtonClick(),
+    }
+
+    const navigationButtons = [workButton, aboutButton, contactButton];
 
 </script>
-<Header />
+<Header header_text="WELCOME IN" buttons={navigationButtons} />
 <div class="sleepless-night" id="Work_Section">
     <img src="/Images/Sleepless_Nights_SC.png" class={`SNSC${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_Night">
     <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``}`}>SLEEPLESS</p>
