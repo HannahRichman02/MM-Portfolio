@@ -67,7 +67,7 @@ function randomizePointArray(source: number[]): void {
 
 function updateBarChart(chart: Chart<'bar', number[], number>, values: number[]): void {
     chart.data.datasets[0].data = [...values];
-    chart.update('none');
+    chart.update();
 }
 
 export function topCanvasAction(node: HTMLCanvasElement): { destroy: () => void } {

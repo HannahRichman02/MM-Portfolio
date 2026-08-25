@@ -1,5 +1,5 @@
 import Chart from 'chart.js/auto';
-import { getRandomInt, lerp, type NavigationButton } from '$lib/utilities.svelte';
+import { getRandomInt, lerp, type NavigationButton } from '$lib/utilities.svelte.js';
 
 /*
 * GIF MANAGEMENT

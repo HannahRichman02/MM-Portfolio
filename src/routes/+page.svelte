@@ -7,7 +7,7 @@
         lineCanvasAction,
         headerText,
         navigationButtons
-    } from '$lib/styles/evenmore.svelte.ts';
+    } from './evenmore.svelte.ts';
     import Header from './Header/Header.svelte';
 </script>
 <Header header_text={headerText} buttons={navigationButtons} />
