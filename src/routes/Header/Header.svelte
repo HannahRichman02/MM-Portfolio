@@ -1,6 +1,6 @@
 <script lang="ts">
     import { bottomCanvasAction, topCanvasAction, type HeaderProps } from './Header.svelte.ts';
-
+    import '$lib/styles/header.css'
     let { header_text, buttons }: HeaderProps = $props();
 </script>
 
