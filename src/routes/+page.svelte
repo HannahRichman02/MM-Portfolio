@@ -1,139 +1,16 @@
-<script lang=es>
-    import '$lib/styles/contentcard.css'
-    import {getGifVersion, restartGif, getLightClass, getChartColor, lightScroll} from '$lib/styles/evenmore.svelte.ts';
-    import {getRandomInt} from '$lib/utilities.svelte.ts';
-    import { onMount } from 'svelte';
-    import Chart from 'chart.js/auto';
+<script lang="ts">
+    import '$lib/styles/contentcard.css';
+    import {
+        getGifVersion,
+        restartGif,
+        getLightClass,
+        lineCanvasAction,
+        headerText,
+        navigationButtons
+    } from './evenmore.svelte.ts';
     import Header from './Header/Header.svelte';
-
-
-    const tValues = [9, 18, 27, 36, 45, 54, 63, 72, 81, 90];
-    let vValues = $state([25, 35, 60, 40, 55, 10, 20, 75, 50, 30]);
-
-         /**
-         * @type {HTMLButtonElement | null}
-         */
-    let line = null;
-
-    /**
-     * @type {{ update: () => void; } | null}
-     */
-    let lineChart;
-
-    onMount (() => {
-        if (line == null) {
-            return
-        }
-        lineChart = new Chart(line, {
-            type: "line",
-            data: {
-                labels: tValues,
-                datasets: [{
-                    fill: false,
-                    lineTension: 0,
-                    backgroundColor: getChartColor("line", "points"),
-                    borderColor: getChartColor("line", "lines"),
-                    data: $state.snapshot(vValues),
-                }]
-            },
-            options: {
-                plugins: {
-                    legend: {display: false},
-                    title: {display: false},
-                    tooltip: {enabled: false},
-                },
-                scales: {
-                    x: {
-                        ticks: {
-                            display: false,
-                        }
-                    },
-                    y: {
-                        ticks: {
-                            display: false,
-                        }
-                    }
-                }
-            }
-        })
-    })
-
-    $effect(() => {
-        const rawData = $state.snapshot(vValues);
-
-        const rawLineColor = getChartColor("line", "lines");
-        const rawPointColor = getChartColor("line", "points");
-
-        if (lineChart) {
-            lineChart.data.datasets[0].data = rawData;
-
-            lineChart.update('none');
-
-            lineChart.data.datasets[0].backgroundColor = rawLineColor;
-            lineChart.data.datasets[0].borderColor = rawLineColor;
-
-            lineChart.data.datasets[0].pointBackgroundColor = rawPointColor;
-            lineChart.data.datasets[0].pointBorderColor = rawPointColor;
-
-            lineChart.update();
-        }
-    })
-
-
-
-    function randomizeWholeArray() {
-        let array = vValues
-        for (let index = 0; index < array.length; index++) {
-            array[index] = getRandomInt(10, 75)
-        }
-        vValues = array
-    }
-
-
-    const intervalLine = setInterval(randomizeWholeArray, 1500);
-
-
-    const workButton = {
-        isButton: false,
-        text: "Work",
-        location: "#Work_Section",
-        style: "Work",
-        func: () => lightScroll("Work"),
-    }
-
-    const aboutButton = {
-        isButton: false,
-        text: "About",
-        location: "#About_Section",
-        style: "About",
-        func: () => lightScroll("About"),
-    }
-
-
-    /**
-     * @param {any} e
-     */
-    function contactButtonClick () {
-        lightScroll('Contact')
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        })
-    }
-
-
-    const contactButton = {
-        isButton: true,
-        text: "Contact",
-        location: null,
-        style: "Contact",
-        func: () => contactButtonClick(),
-    }
-
-    const navigationButtons = [workButton, aboutButton, contactButton];
-
 </script>
-<Header header_text="WELCOME IN" buttons={navigationButtons} />
+<Header header_text={headerText} buttons={navigationButtons} />
 <div class="sleepless-night" id="Work_Section">
     <img src="/Images/Sleepless_Nights_SC.png" class={`SNSC${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_Night">
     <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``}`}>SLEEPLESS</p>
@@ -177,7 +54,7 @@
     <p class={`Years${getLightClass("Work", "eighth") ? ` highlight` : ``}`}>Years</p>
     <figure class={`Line-Graph${getLightClass("Work", "eighth") ? ` highlightLG` : ``}`}>
     </figure>
-    <canvas bind:this={line} class="LineGraphJS" style="width: 100%;max-width:410px; height:100%;max-height:140px">
+    <canvas use:lineCanvasAction class="LineGraphJS" style="width: 100%;max-width:410px; height:100%;max-height:140px">
     </canvas>
 </div>
 <div class="Logo_Mania">
