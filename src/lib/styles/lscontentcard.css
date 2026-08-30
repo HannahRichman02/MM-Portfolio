@@ -1,0 +1,128 @@
+body {
+    min-width: 1920px;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HEADER div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Buttons {
+    left: max(.3rem, .24vw);
+}
+
+.BackToHome {
+    position: relative;
+    margin-left: auto;
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    font-size: max(35px, 1.25vw);
+    text-decoration: none;
+    justify-content: center;
+    top: .7rem;
+    background-color: var(--GrungeGreen);
+    border: 5px solid var(--GrungeGreen);
+    border-radius: 20px;
+    padding: max(18px, .9vw);
+    padding-block: max(10px, .5vw);
+}
+
+.BackToHome:hover {
+    color: var(--GrungeGreen);
+    background-color: var(--DeepBrown);
+}
+
+.Welcome {
+    left: max(2.5rem, 2vw) !important;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROJECT div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.LivingSpacesProject {
+    background-color: var(--DeepBrown);
+    
+}
+
+.LS_Sections {
+    position: relative;
+    display: block;
+    width: 1910px;
+    height: auto;
+}
+
+.VideoContainer {
+    position: relative;
+    display: block;
+    background-color: var(--SoftRed);
+    top: -212.5rem;
+    height: 49rem;
+    width: 87.5rem;
+}
+
+.Description1 {
+    position: relative;
+    display: block;
+    top: -263rem;
+    font-size: 44px;
+    left: 89.5rem;
+    font-family: 'Paragraph';
+    color: var(--DeepBrown);
+    line-height: 1.25;
+}
+
+.Number2 {
+    position: relative;
+    display: block;
+    top: -263.7rem;
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    font-size: 30px;
+    left: 3rem;
+}
+
+.Blender {
+    position: relative;
+    display: block;
+    top: -267.8rem;
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    font-size: 30px;
+    left: 53rem;
+}
+
+.Living {
+    position: relative;
+    display: block;
+    top: -276.5rem;
+    text-align: right;
+    color: var(--EngineOrange);
+    font-size: 203px;
+    font-family: 'Title';
+    right: 1.5rem;
+    transform: scaleY(1.9);
+}
+
+.Spaces {
+    position: relative;
+    display: block;
+    top: -288rem;
+    text-align: right;
+    color: var(--SoftRed);
+    font-size: 213px;
+    font-family: 'Title';
+    right: 1.5rem;
+    transform: scaleY(1.7);
+}
+
+.SketchContainer {
+    position: relative;
+    display: block;
+    background-color: aqua;
+}

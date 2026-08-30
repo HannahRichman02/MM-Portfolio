@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import Chart from 'chart.js/auto';
     import {getRandomInt} from '$lib/utilities.svelte.ts';
+    import '$lib/styles/header.css'
 
     let {header_text, buttons } = $props();
 
