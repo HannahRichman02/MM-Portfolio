@@ -123,6 +123,11 @@ MAIN Div
     color: var(--DeepBrown);
 }
 
+.GRSelected {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
 .LButton {
     position: relative;
     display: block;
@@ -140,6 +145,11 @@ MAIN Div
 }
 
 .LButton:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.LSelected {
     background-color: var(--GrungeYellow);
     color: var(--DeepBrown);
 }
