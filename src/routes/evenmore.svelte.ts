@@ -6,24 +6,34 @@ import { getRandomInt, lerp, type NavigationButton } from '$lib/utilities.svelte
  */
 
 let gifBedroomVersion: number = $state(0);
+let gifSleeplessVersion: number = $state(0);
 
 export function restartGif(which: string): void {
-    if (which === 'bedroom') {
-        gifBedroomVersion += 1;
-        return;
+    switch (which) {
+        case 'bedroom':
+            gifBedroomVersion += 1;
+            break;
+        case 'sleepless':
+            gifSleeplessVersion += 1;
+            break;
+        default:
+            console.error(`Unknown gif location: ${which}`)
     }
-
-    console.error(`Unknown gif location: ${which}`);
 }
 
 export function getGifVersion(which: string): number {
-    if (which === 'bedroom') {
-        return gifBedroomVersion;
+    switch (which) {
+        case 'bedroom':
+            return gifBedroomVersion;
+        case 'sleepless':
+            return gifSleeplessVersion;
+        default:
+            console.error(`Unknown gif version: ${which}`);
+            return 0;
     }
-
-    console.error(`Unknown gif version: ${which}`);
-    return 0;
 }
+
+
 
 
 /*

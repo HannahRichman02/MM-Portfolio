@@ -1,0 +1,238 @@
+body {
+    min-width: 1920px;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HEADER Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Buttons {
+    left: max(.3rem, .24vw);
+}
+
+.BackToHome {
+    position: relative;
+    margin-left: auto;
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    font-size: max(35px, 1.25vw);
+    text-decoration: none;
+    justify-content: center;
+    top: .7rem;
+    background-color: var(--GrungeGreen);
+    border: 5px solid var(--GrungeGreen);
+    border-radius: 20px;
+    padding: max(18px, .9vw);
+    padding-block: max(10px, .5vw);
+}
+
+.BackToHome:hover {
+    color: var(--GrungeGreen);
+    background-color: var(--DeepBrown);
+}
+
+.Welcome {
+    left: max(2.5rem, 2vw) !important;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MAIN Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Main {
+    background-color: var(--DeepBrown);
+    height: 80rem;
+}
+
+.LogosVideoContainer {
+    position: relative;
+    display: block;;
+    margin-left: auto;
+    width: 98rem;
+    right: 2.5rem;
+}
+
+.Placeholder {
+    width: 100%;
+    height: auto;
+    border: max(.5rem, .4vw) solid var(--GrungeYellow);
+}
+
+.LOGOTitle {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 225px;
+    color: var(--SoftRed);
+    top: -63.5rem;
+    line-height: .75;
+    transform: scaleY(1.33);
+    left: .3rem;
+}
+
+.MANIATitle {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 291px;
+    color: var(--GrungeGreen);
+    top: -78rem;
+}
+
+.LMLines {
+    position: relative;
+    display: block;
+    width: 1910px;
+    height: auto;
+    top: -100.5rem;
+}
+
+.LMDescription {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: 42px;
+    color: var(--GrungeYellow);
+    top: -107.1rem;
+}
+
+.GRButton {
+    position: relative;
+    display: block;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.4vw);
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    width: 23rem;
+    text-decoration: none;
+    top: -108.5rem;
+}
+
+.GRButton:Hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.LButton {
+    position: relative;
+    display: block;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.4vw);
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    width: 23rem;
+    text-decoration: none;
+    top: -112.5rem;
+    left: 23.5rem;
+}
+
+.LButton:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.RRButton {
+    position: relative;
+    display: block;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.4vw);
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    width: 24.5rem;
+    text-decoration: none;
+    top: -116.5rem;
+    left: 47rem;
+}
+
+.RRButton:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.HPButton {
+    position: relative;
+    display: block;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.4vw);
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    width: 23rem;
+    text-decoration: none;
+    top: -120.5rem;
+    margin-left: auto;
+    right: 25rem;
+}
+
+.HPButton:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.KButton {
+    position: relative;
+    display: block;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    font-size: max(28px, 1.4vw);
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    width: 23rem;
+    text-decoration: none;
+    top: -124.5rem;
+    margin-left: auto;
+    right: 1.5rem;
+}
+
+.KButton:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GHOSTLY ROSE Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.GhostlyRoseSection {
+    background-color: var(--DeepBrown);
+}
+
+.GRBG {
+    position: relative;
+    display: block;
+    width: 1920px;
+    height: auto;
+    top: -.5rem;
+}
+
+.GRIdeation1 {
+    position: relative;
+    display: block;
+    width: 40rem;
+    height: auto;
+    top: -140rem;
+    left: 1rem;
+    border: 5px solid var(--EngineOrange);
+}

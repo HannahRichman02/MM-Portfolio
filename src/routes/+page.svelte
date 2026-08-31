@@ -12,7 +12,14 @@
 </script>
 <Header header_text={headerText} buttons={navigationButtons} />
 <div class="sleepless-night" id="Work_Section">
-    <img src="/Images/Sleepless_Nights_SC.png" class={`SNSC${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_Night">
+    <div class="SN_Gif_Container">
+        {#key getGifVersion('sleepless')}
+            <a href="/SleeplessNight">
+                <img src="/Images/Sleepless_Nights_SC.png" class={`SNSC${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_Night" onmouseover={() => restartGif('sleepless')} onfocus={() => restartGif('sleepless')}>
+            </a>
+                <img src="/Images/SN_GIF3.gif" class={`SNGIF${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_NightGIF" onmouseover={() => restartGif('sleepless')} onfocus={() => restartGif('sleepless')}>
+        {/key}
+    </div>
     <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``}`}>SLEEPLESS</p>
     <p class={`Night${getLightClass("Work", "second") ? ` highlight` : ``}`}>NIGHT</p>
     <img src="/Images/Stars_v02.png" class={`Stars_Line${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Starries>
@@ -58,7 +65,9 @@
     </canvas>
 </div>
 <div class="Logo_Mania">
-    <img src="/Images/Ghostly_Rose.png" class={`GhostlyRose${getLightClass("Work", "tenth") ? ' highlightborder' : ``}`} alt="Ghostly Rose">
+    <a href="/LogoMania">
+        <img src="/Images/Ghostly_Rose.png" class={`GhostlyRose${getLightClass("Work", "tenth") ? ' highlightborder' : ``}`} alt="Ghostly Rose">
+    </a>
     <img src="/Images/Bars.png" class={`BarLines${getLightClass("Work", "tenth") ? ` highlightgreen` : ``}`} alt="BarLines">
     <p class={`Logo${getLightClass("Work", "eleventh") ? ` highlight` : ``}`}>LOGO</p>
     <p class={`Mania${getLightClass("Work", "eleventh") ? ` highlight` : ``}`}>MANIA</p>

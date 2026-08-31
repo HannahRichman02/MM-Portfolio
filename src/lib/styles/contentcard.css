@@ -263,6 +263,10 @@ Beginning of the SLEEPLESS NIGHT div
     max-height: max(465px, 24.2vw);
 }
 
+.SN_Gif_Container {
+    height: 28rem;
+}
+
 .SNSC {
     position: relative;
     display: block;
@@ -272,6 +276,22 @@ Beginning of the SLEEPLESS NIGHT div
     height: auto;
     border: max(.5rem, .4vw) solid var(--EngineOrange); 
     transition: border 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.SNSC:hover {
+    opacity: 0;
+}
+
+.SNGIF {
+    position: relative;
+    display: block;
+    width: max(46rem, 38.3vw);
+    height: auto;
+    left: max(1rem, .9vw);
+    border: max(.5rem, .4vw) solid var(--BrightYellow); 
+    transition: border 0.5s ease-in-out;
+    top: -27rem;
 }
 
 .Sleepless {

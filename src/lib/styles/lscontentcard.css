@@ -47,6 +47,8 @@ PROJECT div
 
 .LivingSpacesProject {
     background-color: var(--DeepBrown);
+    height: 213rem;
+    overflow: hidden;
     
 }
 
@@ -63,7 +65,8 @@ PROJECT div
     background-color: var(--SoftRed);
     top: -212.5rem;
     height: 49rem;
-    width: 87.5rem;
+    width: 86.5rem;
+    left: 1rem;
 }
 
 .Description1 {
@@ -87,7 +90,7 @@ PROJECT div
     left: 3rem;
 }
 
-.Blender {
+.Blender1 {
     position: relative;
     display: block;
     top: -267.8rem;
@@ -124,5 +127,123 @@ PROJECT div
 .SketchContainer {
     position: relative;
     display: block;
+    background-color: var(--DeepBrown);
+    width: 45rem;
+    height: 36rem;
+    top: -271rem;
+    left: 2rem;
+}
+
+.RoomSketch {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.Description2 {
+    position: relative;
+    display: block;
+    top: -310rem;
+    font-size: 50px;
+    left: 50rem;
+    font-family: 'Paragraph';
+    color: var(--DeepBrown);
+    line-height: 1.25;
+}
+
+.VPalette {
+    position: relative;
+    display: block;
+    top: -310.5rem;
+    width: 2.5rem;
+    height: auto;
+    margin-left: auto;
+    right: 5rem;
+}
+
+.SketchVidContainer {
+    position: relative;
+    display: block;
     background-color: aqua;
+    top: -347.5rem;
+    width: 45rem;
+    height: 36rem;
+    margin-left: auto;
+    right: 8rem;
+}
+
+.SketchVid {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.Description3 {
+    position: relative;
+    display: block;
+    top: -386.8rem;
+    font-size: 47px;
+    left: 20.8rem;
+    font-family: 'Paragraph';
+    color: var(--GrungeGreen);
+    line-height: 1.25;
+}
+
+.GTT {
+    position: relative;
+    display: inline-block;
+    top: -388rem;
+    font-size: 47px;
+    margin-left: auto;
+    left: 63rem;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    border: 5px solid var(--DeepBrown);
+    border-radius: 20px;
+    padding: max(10px, .5vw);
+    text-decoration: none;
+    width: 23.1rem;
+    text-align: center;
+}
+
+.GTT:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.RTH {
+    position: relative;
+    display: inline-block;
+    top: -388.2rem;
+    font-size: 40px;
+    margin-left: auto;
+    left: 63.3rem;
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+    font-family: 'Paragraph';
+    border: 5px solid var(--DeepBrown);
+    border-radius: 20px;
+    text-decoration: none;
+    width: 27rem;
+    text-align: center;
+    padding: max(14px, .7vw);
+}
+
+.RTH:hover {
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+}
+
+.Email1 {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: 60px;
+    top: -389.3rem;
+    color: var(--DeepBrown);
+    text-align: right;
+    right: 5.5rem;
 }
