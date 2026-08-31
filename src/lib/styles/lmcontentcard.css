@@ -1,8 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 1920px;
     min-height: auto;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 /*
@@ -227,12 +233,14 @@ GHOSTLY ROSE Div
 
 .GhostlyRoseSection {
     background-color: var(--DeepBrown);
+    height: 133rem;
+    overflow: hidden;
 }
 
 .GRBG {
     position: relative;
     display: block;
-    width: 1920px;
+    width: 1900px;
     height: auto;
     top: -.5rem;
 }
@@ -240,9 +248,214 @@ GHOSTLY ROSE Div
 .GRIdeation1 {
     position: relative;
     display: block;
-    width: 40rem;
+    width: 39rem;
     height: auto;
-    top: -140rem;
+    top: -138.5rem;
     left: 1rem;
-    border: 5px solid var(--EngineOrange);
+    border: 8px solid var(--EngineOrange);
+}
+
+.Step1 {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 99px;
+    color: var(--SoftRed);
+    border: 8px solid var(--SoftRed);
+    border-radius: 20px;
+    top: -167.5rem;
+    left: 41.5rem;
+    padding: 1;
+    margin: 0;
+    width: 42.5rem;
+    transform: scaleY(2);
+    line-height: .8;
+}
+
+.Step1Desc {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: 36px;
+    color: var(--GrungeGreen);
+    top: -166.5rem;
+    left: 42rem;
+    line-height: 1.28;
+}
+
+.GRName {
+    position: relative;
+    display: block;
+    font-family: 'Barcode';
+    font-size: 70px;
+    color: var(--SoftRed);
+    transform: rotate(90deg);
+    top: -139.5rem;
+    margin-left: auto;
+    right: -44rem;
+}
+
+.GRIdeation2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    right: 1.5rem;
+    top: -173.5rem;
+    width: 39.5rem;
+    height: auto;
+    border: 8px solid var(--EngineOrange);
+}
+
+.Step2 {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 96.5px;
+    color: var(--SoftRed);
+    border: 8px solid var(--SoftRed);
+    border-radius: 20px;
+    top: -202.3rem;
+    left: 1rem;
+    padding: 1px;
+    margin: 0;
+    width: 41rem;
+    transform: scaleY(2.2);
+    line-height: .8;
+}
+.Step2Desc {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: 36px;
+    color: var(--GrungeGreen);
+    top: -200.5rem;
+    left: 1rem;
+    line-height: 1.2;
+}
+
+.GRIdeation3 {
+    position: relative;
+    display: block;
+    width: 37.5rem;
+    height: auto;
+    top: -196.5rem;
+    left: 1rem;
+    border: 8px solid var(--SoftRed);
+}
+
+.GRIdeation4 {
+    position: relative;
+    display: block;
+    width: 37.5rem;
+    height: auto;
+    top: -227.5rem;
+    left: 40.5rem;
+    border: 8px solid var(--GrungeYellow);
+}
+
+.GRIdeation5 {
+    position: relative;
+    display: block;
+    width: 37.5rem;
+    height: auto;
+    top: -258.5rem;
+    right: 1.5rem;
+    margin-left: auto;
+    border: 8px solid var(--SoftRed);
+}
+
+.Step3Desc {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: 36px;
+    color: var(--GrungeGreen);
+    top: -260rem;
+    left: 1rem;
+    line-height: 1.2;
+}
+
+.Step3 {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 95px;
+    color: var(--SoftRed);
+    border: 8px solid var(--SoftRed);
+    border-radius: 20px;
+    top: -258.5rem;
+    left: 1rem;
+    padding: 1px;
+    margin: 0;
+    width: 40rem;
+    transform: scaleY(2);
+    line-height: .8;
+}
+
+.LMGRGTT {
+    position: relative;
+    display: inline-block;
+    top: -259rem;
+    font-size: 55px;
+    margin-left: auto;
+    left: 62rem;
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(20px, .5vw);
+    text-decoration: none;
+    width: 25rem;
+    text-align: center;
+}
+
+.LMGRGTT:hover {
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+}
+
+.LMGRRTH {
+    position: relative;
+    display: inline-block;
+    top: -259.3rem;
+    font-size: 41px;
+    margin-left: auto;
+    left: 62.5rem;
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    text-decoration: none;
+    width: 27rem;
+    text-align: center;
+}
+
+.LMGRRTH:hover {
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+}
+
+.LMGREmail {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: 58px;
+    color: var(--GrungeGreen);
+    top: -263rem;
+    line-height: 1.2;
+    text-align: right;
+    right: 1.5rem;
+}
+
+.GRChevron {
+    position: relative;
+    display: block;
+    top: -372.3rem;
+    left: 41rem;
+    width: 70rem;
+    height: auto;
 }

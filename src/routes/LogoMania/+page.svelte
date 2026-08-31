@@ -38,7 +38,7 @@ const BTH = [ backToHome ]
 
 </script>
 
-<div id="Top">
+<div id="TopLM">
     <Header header_text="PROJECT 3" buttons={BTH} />
 </div>
 <div class="Main">
@@ -58,10 +58,22 @@ const BTH = [ backToHome ]
 {#if GRSelected}
 <div class="GhostlyRoseSection">
     <img src="/Images/LM_GR_BG.png" class="GRBG" alt=GRBG>
-    <img src="/Images/GR_Logo_Ideation_01.png" class="GRIdeation1" alt=GRIdeation1>
+    <img src="/Images/GR_Logo_Ideation.png" class="GRIdeation1" alt=GRIdeation1>
     <p class="Step1">STEP 1</p>
     <p class="Step1Desc">For the first step I started with simple,<br>blocked out shapes and general ideas to<br>begin narrowing things down to match the<br>customer's vision. He decided to move<br>fowards with font #3 and logo #5.</p>
     <p class="GRName">GHOSTLY ROSE</p>
+    <img src="/Images/GR_Logo_Ideation_01.png" class="GRIdeation2" alt=GRIdeation2>
+    <p class="Step2">STEP 2</p>
+    <p class="Step2Desc">After discussion from the previous options, it was<br>requested to add leaves to the chosen design. I<br>further refined the shape language and added some<br>leaf options as well as presenting some more font<br>variations, of which text #2 and icon #3 were chosen.</p>
+    <img src="/Images/GR_Logo_Ideation_03.png" class="GRIdeation3" alt=GRIdeation3>
+    <img src="/Images/GR_Logo_Ideation_04.png" class="GRIdeation4" alt=GRIdeation4>
+    <img src="/Images/GR_Logo_Ideation_05.png" class="GRIdeation5" alt=GRIdeation5>
+    <p class="Step3Desc">After the previous selection, I moved forward with color and further refinement on<br>the text. #3 was preferred for the text and numbers 2, 4 and 5 were the final color<br>choices. The final choice was between #7, #8 and #9, with #7 being the final design.<br>From there we went forth with the animation in which the client asked for a spiritual<br>and nature inspired design.</p>
+    <p class="Step3">STEP 3</p>
+    <a href="#TopLM" class="LMGRGTT">Go To Top</a>
+    <a href="/" class="LMGRRTH">Return To Home</a>
+    <p class="LMGREmail">hannahrichman.art@gmail.com</p>
+    <img src="/Images/Chevron.png" class="GRChevron" alt=GRChevron>
 </div>
 {/if}
 {#if lupineSelected}
