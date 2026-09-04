@@ -259,7 +259,10 @@ Beginning of the SLEEPLESS NIGHT div
 */
 
 .sleepless-night {
+    position: relative;
+    display: block;
     background-color: var(--DeepBrown);
+    max-height: max(465px, 24.2vw);
     max-height: max(465px, 24.2vw);
 }
 

@@ -1,6 +1,6 @@
 .Header {
     background-color: var(--DeepBrown);
-    max-height: max(375px, 19.5vw);
+    max-height: max(370px, 19.2vw);
     padding: 0;
     overflow: hidden;
 }

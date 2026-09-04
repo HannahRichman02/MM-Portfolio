@@ -48,7 +48,7 @@ const BTH = [ backToHome ]
     <p class="LOGOTitle">L<br>O<br>G<br>O</p>
     <p class="MANIATitle">MANIA</p>
     <img src="/Images/LM_Lines.png" class="LMLines" alt=LMLines>
-    <p class="LMDescription">A collection of animated logos for softwares, gamertags and businesses.</p>
+    <p class="LMDescription">A collection of animated logos for software, gamertags and businesses.</p>
     <button class={`GRButton ${GRSelected ? 'GRSelected' : ''}`} onmousedown={() => toggleButton('GR')}>Ghostly Rose</button>
     <button class={`LButton ${lupineSelected ? 'LSelected' : ''}`} onmousedown="{() => toggleButton('Lupine')}">Lupine</button>
     <button class="RRButton">Retro Rainbow</button>
@@ -78,6 +78,13 @@ const BTH = [ backToHome ]
 {/if}
 {#if lupineSelected}
 <div class="LupineSection">
-    <p style="color: white;">This is a placeholder</p>
+    <img src="/Images/Logo.png" class="LLogoOG" alt=LLogo>
+    <p class="OGDesc">With an already<br>established logo, this<br>client already had a clear<br>vision in mind for their<br>expectations of this<br>project. They requested<br>a logo animation including<br>bouncing of the<br>creature's tail and clean<br>up of the hand-written<br>text.</p>
+    <img src="/Images/LM_L_BG.png" class="LBG" alt=LBG>
+    <img src="/Images/LUPINE_LOGO133.png" class="LLogoFrame" alt=LLogoFrame>
+    <p class="FrameDesc">After finding a matching font<br>and getting the client's approval,<br>I moved forward with the<br>animation, deciding that hand-<br>drawn 2D animation would match<br>the client's vision best.</p>
+    <a href="#TopLM" class="LMLGTT">Go To Top</a>
+    <a href="/" class="LMLRTH">Return To Home</a>
+    <p class="LMLEmail">hannahrichman.art@gmail.com</p>
 </div>
 {/if}

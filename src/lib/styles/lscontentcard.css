@@ -47,7 +47,7 @@ PROJECT div
 
 .LivingSpacesProject {
     background-color: var(--DeepBrown);
-    height: 213rem;
+    height: max(213rem, 178.1vw);
     overflow: hidden;
     
 }
@@ -55,7 +55,7 @@ PROJECT div
 .LS_Sections {
     position: relative;
     display: block;
-    width: 1910px;
+    width: max(1910px, 99.4vw);
     height: auto;
 }
 
@@ -63,18 +63,18 @@ PROJECT div
     position: relative;
     display: block;
     background-color: var(--SoftRed);
-    top: -212.5rem;
-    height: 49rem;
-    width: 86.5rem;
-    left: 1rem;
+    top: min(-212.5rem, -177vw);
+    height: max(49rem, 41vw);
+    width: max(86.5rem, 72.3vw);
+    left: max(1rem, .8vw);
 }
 
 .Description1 {
     position: relative;
     display: block;
-    top: -263rem;
-    font-size: 44px;
-    left: 89.5rem;
+    top: min(-263rem, -219.1vw);
+    font-size: max(44px, 2.3vw);
+    left: max(89.5rem, 74.5vw);
     font-family: 'Paragraph';
     color: var(--DeepBrown);
     line-height: 1.25;
@@ -83,44 +83,44 @@ PROJECT div
 .Number2 {
     position: relative;
     display: block;
-    top: -263.7rem;
+    top: min(-263.7rem, -219.6vw);
     color: var(--DeepBrown);
     font-family: 'Paragraph';
-    font-size: 30px;
-    left: 3rem;
+    font-size: max(30px, 1.6vw);
+    left: max(3rem, 2.5vw);
 }
 
 .Blender1 {
     position: relative;
     display: block;
-    top: -267.8rem;
+    top: min(-267.8rem, -223.1vw);
     color: var(--DeepBrown);
     font-family: 'Paragraph';
-    font-size: 30px;
-    left: 53rem;
+    font-size: max(30px, 1.6vw);
+    left: max(53rem, 44.1vw);
 }
 
 .Living {
     position: relative;
     display: block;
-    top: -276.5rem;
+    top: min(-276.5rem, -231vw);
     text-align: right;
     color: var(--EngineOrange);
-    font-size: 203px;
+    font-size: max(203px, 10.6vw);
     font-family: 'Title';
-    right: 1.5rem;
+    right: max(1.5rem, 1.2vw);
     transform: scaleY(1.9);
 }
 
 .Spaces {
     position: relative;
     display: block;
-    top: -288rem;
+    top: min(-288rem, -240vw);
     text-align: right;
     color: var(--SoftRed);
-    font-size: 213px;
+    font-size: max(213px, 11.1vw);
     font-family: 'Title';
-    right: 1.5rem;
+    right: max(1.5rem, 1.2vw);
     transform: scaleY(1.7);
 }
 
@@ -128,10 +128,10 @@ PROJECT div
     position: relative;
     display: block;
     background-color: var(--DeepBrown);
-    width: 45rem;
-    height: 36rem;
-    top: -271rem;
-    left: 2rem;
+    width: max(45rem, 37.5vw);
+    height: max(36rem, 30vw);
+    top: min(-271rem, -225.7vw);
+    left: max(2rem, 1.6vw);
 }
 
 .RoomSketch {
@@ -144,9 +144,9 @@ PROJECT div
 .Description2 {
     position: relative;
     display: block;
-    top: -310rem;
-    font-size: 50px;
-    left: 50rem;
+    top: min(-310rem, -258.2vw);
+    font-size: max(50px, 2.6vw);
+    left: max(50rem, 41.6vw);
     font-family: 'Paragraph';
     color: var(--DeepBrown);
     line-height: 1.25;
@@ -155,22 +155,21 @@ PROJECT div
 .VPalette {
     position: relative;
     display: block;
-    top: -310.5rem;
-    width: 2.5rem;
+    top: min(-310.5rem, -259.5vw);
+    width: max(2.5rem, 2.1vw);
     height: auto;
     margin-left: auto;
-    right: 5rem;
+    right: max(5rem, 4.2vw);
 }
 
 .SketchVidContainer {
     position: relative;
     display: block;
-    background-color: aqua;
-    top: -347.5rem;
-    width: 45rem;
-    height: 36rem;
+    top: min(-347.5rem, -290vw);
+    width: max(45rem, 37.5vw);
+    height: max(36rem, 30vw);
     margin-left: auto;
-    right: 8rem;
+    right: max(8rem, 6.7vw);
 }
 
 .SketchVid {
@@ -183,9 +182,9 @@ PROJECT div
 .Description3 {
     position: relative;
     display: block;
-    top: -386.8rem;
-    font-size: 47px;
-    left: 20.8rem;
+    top: min(-386.8rem, -323.2vw);
+    font-size: max(47px, 2.5vw);
+    left: max(20.8rem, 16.8vw);
     font-family: 'Paragraph';
     color: var(--GrungeGreen);
     line-height: 1.25;
@@ -194,10 +193,10 @@ PROJECT div
 .GTT {
     position: relative;
     display: inline-block;
-    top: -388rem;
-    font-size: 47px;
+    top: min(-388rem, -325vw);
+    font-size: max(47px, 2.5vw);
     margin-left: auto;
-    left: 63rem;
+    left: max(63rem, 52.5vw);
     background-color: var(--DeepBrown);
     color: var(--GrungeYellow);
     font-family: 'Paragraph';
@@ -205,7 +204,7 @@ PROJECT div
     border-radius: 20px;
     padding: max(10px, .5vw);
     text-decoration: none;
-    width: 23.1rem;
+    width: max(23.1rem, 19.2vw);
     text-align: center;
 }
 
@@ -217,19 +216,19 @@ PROJECT div
 .RTH {
     position: relative;
     display: inline-block;
-    top: -388.2rem;
-    font-size: 40px;
+    top: min(-388.2rem, -325.2vw);
+    font-size: max(40px, 1.7vw);
     margin-left: auto;
-    left: 63.3rem;
+    left: max(63.3rem, 52.7vw);
     background-color: var(--DeepBrown);
     color: var(--GrungeYellow);
     font-family: 'Paragraph';
     border: 5px solid var(--DeepBrown);
     border-radius: 20px;
     text-decoration: none;
-    width: 27rem;
+    width: max(27rem, 22.5vw);
     text-align: center;
-    padding: max(14px, .7vw);
+    padding: max(14px, 1vw);
 }
 
 .RTH:hover {
@@ -241,9 +240,9 @@ PROJECT div
     position: relative;
     display: block;
     font-family: 'Paragraph';
-    font-size: 60px;
-    top: -389.3rem;
+    font-size: max(60px, 3.1vw);
+    top: min(-389.3rem, -326vw);
     color: var(--DeepBrown);
     text-align: right;
-    right: 5.5rem;
+    right: max(5.5rem, 4.6vw);
 }

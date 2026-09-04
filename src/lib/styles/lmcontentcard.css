@@ -29,7 +29,7 @@ HEADER Div
     font-size: max(35px, 1.25vw);
     text-decoration: none;
     justify-content: center;
-    top: .7rem;
+    top: max(.7rem, .4vw);
     background-color: var(--GrungeGreen);
     border: 5px solid var(--GrungeGreen);
     border-radius: 20px;
@@ -54,15 +54,15 @@ MAIN Div
 
 .Main {
     background-color: var(--DeepBrown);
-    height: 80rem;
+    height: max(80rem, 66.6vw);
 }
 
 .LogosVideoContainer {
     position: relative;
     display: block;;
     margin-left: auto;
-    width: 98rem;
-    right: 2.5rem;
+    width: max(98rem, 81.6vw);
+    right: max(2.5rem, 2.1vw);
 }
 
 .Placeholder {
@@ -75,38 +75,38 @@ MAIN Div
     position: relative;
     display: block;
     font-family: 'Title';
-    font-size: 225px;
+    font-size: max(225px, 11.7vw);
     color: var(--SoftRed);
-    top: -63.5rem;
+    top: min(-63.5rem, -52.9vw);
     line-height: .75;
     transform: scaleY(1.33);
-    left: .3rem;
+    left: max(.3rem, .2vw);
 }
 
 .MANIATitle {
     position: relative;
     display: block;
     font-family: 'Title';
-    font-size: 291px;
+    font-size: max(291px, 15.1vw);
     color: var(--GrungeGreen);
-    top: -78rem;
+    top: min(-78rem, -65vw);
 }
 
 .LMLines {
     position: relative;
     display: block;
-    width: 1910px;
+    width: max(1910px, 99.4vw);
     height: auto;
-    top: -100.5rem;
+    top: min(-100.5rem, -83.7vw);
 }
 
 .LMDescription {
     position: relative;
     display: block;
     font-family: 'Paragraph';
-    font-size: 42px;
+    font-size: max(42px, 2.2vw);
     color: var(--GrungeYellow);
-    top: -107.1rem;
+    top: min(-107.1rem, -89.2vw);
 }
 
 .GRButton {
@@ -119,9 +119,9 @@ MAIN Div
     border: 5px solid var(--GrungeYellow);
     border-radius: 20px;
     padding: max(10px, .5vw);
-    width: 23rem;
+    width: max(23rem, 19.2vw);
     text-decoration: none;
-    top: -108.5rem;
+    top: min(-108.5rem, -90.4vw);
 }
 
 .GRButton:Hover {
@@ -144,10 +144,10 @@ MAIN Div
     border: 5px solid var(--GrungeYellow);
     border-radius: 20px;
     padding: max(10px, .5vw);
-    width: 23rem;
+    width: max(23rem, 19.2vw);
     text-decoration: none;
-    top: -112.5rem;
-    left: 23.5rem;
+    top: min(-112.5rem, -93.4vw);
+    left: max(23.5rem, 19.6vw);
 }
 
 .LButton:hover {
@@ -170,10 +170,10 @@ MAIN Div
     border: 5px solid var(--GrungeYellow);
     border-radius: 20px;
     padding: max(10px, .5vw);
-    width: 24.5rem;
+    width: max(24.5rem, 20.4vw);
     text-decoration: none;
-    top: -116.5rem;
-    left: 47rem;
+    top: min(-116.5rem, -96.4vw);
+    left: max(47rem, 39.1vw);
 }
 
 .RRButton:hover {
@@ -191,11 +191,11 @@ MAIN Div
     border: 5px solid var(--GrungeYellow);
     border-radius: 20px;
     padding: max(10px, .5vw);
-    width: 23rem;
+    width: max(23rem, 19.2vw);
     text-decoration: none;
-    top: -120.5rem;
+    top: min(-120.5rem, -99.4vw);
     margin-left: auto;
-    right: 25rem;
+    right: max(25rem, 20.6vw);
 }
 
 .HPButton:hover {
@@ -213,11 +213,11 @@ MAIN Div
     border: 5px solid var(--GrungeYellow);
     border-radius: 20px;
     padding: max(10px, .5vw);
-    width: 23rem;
+    width: max(23rem, 19.2vw);
     text-decoration: none;
-    top: -124.5rem;
+    top: min(-124.5rem, -102.4vw);
     margin-left: auto;
-    right: 1.5rem;
+    right: max(1.5rem, 1.1vw);
 }
 
 .KButton:hover {
@@ -233,25 +233,25 @@ GHOSTLY ROSE Div
 
 .GhostlyRoseSection {
     background-color: var(--DeepBrown);
-    height: 133rem;
+    height: max(133rem, 110.8vw);
     overflow: hidden;
 }
 
 .GRBG {
     position: relative;
     display: block;
-    width: 1900px;
+    width: max(1900px, 98.9vw);
     height: auto;
-    top: -.5rem;
+    top: min(-.5rem, -.4vw);
 }
 
 .GRIdeation1 {
     position: relative;
     display: block;
-    width: 39rem;
+    width: max(39rem, 32.5vw);
     height: auto;
-    top: -138.5rem;
-    left: 1rem;
+    top: min(-138.5rem, -115.4vw);
+    left: max(1rem, .8vw);
     border: 8px solid var(--EngineOrange);
 }
 
@@ -259,15 +259,15 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Title';
-    font-size: 99px;
+    font-size: max(99px, 5.2vw);
     color: var(--SoftRed);
     border: 8px solid var(--SoftRed);
     border-radius: 20px;
-    top: -167.5rem;
-    left: 41.5rem;
+    top: min(-167.5rem, -139.5vw);
+    left: max(41.5rem, 34.5vw);
     padding: 1;
     margin: 0;
-    width: 42.5rem;
+    width: max(42.5rem, 35.4vw);
     transform: scaleY(2);
     line-height: .8;
 }
@@ -276,10 +276,10 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Paragraph';
-    font-size: 36px;
+    font-size: max(36px, 1.9vw);
     color: var(--GrungeGreen);
-    top: -166.5rem;
-    left: 42rem;
+    top: min(-166.5rem, -138.7vw);
+    left: max(42rem, 35vw);
     line-height: 1.28;
 }
 
@@ -287,21 +287,21 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Barcode';
-    font-size: 70px;
+    font-size: max(70px, 3.6vw);
     color: var(--SoftRed);
     transform: rotate(90deg);
-    top: -139.5rem;
+    top: min(-139.5rem, -116.2vw);
     margin-left: auto;
-    right: -44rem;
+    right: min(-44rem, -37vw);
 }
 
 .GRIdeation2 {
     position: relative;
     display: block;
     margin-left: auto;
-    right: 1.5rem;
-    top: -173.5rem;
-    width: 39.5rem;
+    right: max(1.5rem, 1.2vw);
+    top: min(-173.5rem, -144.5vw);
+    width: max(39.5rem, 32.9vw);
     height: auto;
     border: 8px solid var(--EngineOrange);
 }
@@ -310,15 +310,15 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Title';
-    font-size: 96.5px;
+    font-size: max(96.5px, 5vw);
     color: var(--SoftRed);
     border: 8px solid var(--SoftRed);
     border-radius: 20px;
-    top: -202.3rem;
-    left: 1rem;
+    top: min(-202.3rem, -167.3vw);
+    left: max(1rem, .8vw);
     padding: 1px;
     margin: 0;
-    width: 41rem;
+    width: max(41rem, 34.2vw);
     transform: scaleY(2.2);
     line-height: .8;
 }
@@ -326,40 +326,40 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Paragraph';
-    font-size: 36px;
+    font-size: max(36px, 1.9vw);
     color: var(--GrungeGreen);
-    top: -200.5rem;
-    left: 1rem;
+    top: min(-200.5rem, -166vw);
+    left: max(1rem, .8vw);
     line-height: 1.2;
 }
 
 .GRIdeation3 {
     position: relative;
     display: block;
-    width: 37.5rem;
+    width: max(37.5rem, 31.2vw);
     height: auto;
-    top: -196.5rem;
-    left: 1rem;
+    top: min(-196.5rem, -163vw);
+    left: max(1rem, .8vw);
     border: 8px solid var(--SoftRed);
 }
 
 .GRIdeation4 {
     position: relative;
     display: block;
-    width: 37.5rem;
+    width: max(37.5rem, 31.2vw);
     height: auto;
-    top: -227.5rem;
-    left: 40.5rem;
+    top: min(-227.5rem, -188.45vw);
+    left: max(40.5rem, 33.7vw);
     border: 8px solid var(--GrungeYellow);
 }
 
 .GRIdeation5 {
     position: relative;
     display: block;
-    width: 37.5rem;
+    width: max(37.5rem, 31.2vw);
     height: auto;
-    top: -258.5rem;
-    right: 1.5rem;
+    top: min(-258.5rem, -213.9vw);
+    right: max(1.5rem, 1.2vw);
     margin-left: auto;
     border: 8px solid var(--SoftRed);
 }
@@ -368,10 +368,10 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Paragraph';
-    font-size: 36px;
+    font-size: max(36px, 1.9vw);
     color: var(--GrungeGreen);
-    top: -260rem;
-    left: 1rem;
+    top: min(-260rem, -215.8vw);
+    left: max(1rem, .8vw);
     line-height: 1.2;
 }
 
@@ -379,15 +379,15 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Title';
-    font-size: 95px;
+    font-size: max(95px, 4.9vw);
     color: var(--SoftRed);
     border: 8px solid var(--SoftRed);
     border-radius: 20px;
-    top: -258.5rem;
-    left: 1rem;
+    top: min(-258.5rem, -215.3vw);
+    left: max(1rem, .8vw);
     padding: 1px;
     margin: 0;
-    width: 40rem;
+    width: max(40rem, 33.3vw);
     transform: scaleY(2);
     line-height: .8;
 }
@@ -395,10 +395,10 @@ GHOSTLY ROSE Div
 .LMGRGTT {
     position: relative;
     display: inline-block;
-    top: -259rem;
-    font-size: 55px;
+    top: min(-259rem, -213vw);
+    font-size: max(55px, 2.9vw);
     margin-left: auto;
-    left: 62rem;
+    left: max(62rem, 51.6vw);
     background-color: var(--GrungeYellow);
     color: var(--DeepBrown);
     font-family: 'Paragraph';
@@ -406,7 +406,7 @@ GHOSTLY ROSE Div
     border-radius: 20px;
     padding: max(20px, .5vw);
     text-decoration: none;
-    width: 25rem;
+    width: max(25rem, 20.87vw);
     text-align: center;
 }
 
@@ -418,19 +418,19 @@ GHOSTLY ROSE Div
 .LMGRRTH {
     position: relative;
     display: inline-block;
-    top: -259.3rem;
-    font-size: 41px;
+    top: min(-259.3rem, -213.3vw);
+    font-size: max(41px, 2.1vw);
     margin-left: auto;
-    left: 62.5rem;
+    left: max(62.5rem, 52.1vw);
     background-color: var(--GrungeYellow);
     color: var(--DeepBrown);
     font-family: 'Paragraph';
     border: 5px solid var(--GrungeYellow);
     border-radius: 20px;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: max(28px, 1.1vw);
+    padding-bottom: max(28px, 1.1vw);
     text-decoration: none;
-    width: 27rem;
+    width: max(27rem, 22.5vw);
     text-align: center;
 }
 
@@ -443,19 +443,138 @@ GHOSTLY ROSE Div
     position: relative;
     display: block;
     font-family: 'Paragraph';
-    font-size: 58px;
+    font-size: max(58px, 3vw);
     color: var(--GrungeGreen);
-    top: -263rem;
+    top: min(-263rem, -216vw);
     line-height: 1.2;
     text-align: right;
-    right: 1.5rem;
+    right: max(1.5rem, 1.2vw);
 }
 
 .GRChevron {
     position: relative;
     display: block;
-    top: -372.3rem;
-    left: 41rem;
-    width: 70rem;
+    top: min(-372.3rem, -307.5vw);
+    left: max(41rem, 34.2vw);
+    width: max(70rem, 58.3vw);
     height: auto;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LUPINE Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.LupineSection {
+    background-color: var(--DeepBrown);
+    height: max(90rem, 75vw);
+    overflow: hidden;
+}
+
+.LLogoOG {
+    position: relative;
+    display: block;
+    width: max(68rem, 56.6vw);
+    height: auto;
+    left: max(1rem, .8vw);
+    border: 8px solid var(--SoftRed);
+}
+
+.OGDesc {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: max(48px, 2.5vw);
+    color: var(--GrungeGreen);
+    left: max(70.5rem, 58.7vw);
+    top: min(-42.5rem, -35.4vw);
+}
+
+.LBG {
+    position: relative;
+    display: block;
+    width: max(1905px, 99.2vw);
+    height: auto;
+    top: min(-45.5rem, -37.9vw);
+}
+
+.LLogoFrame {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    right: max(1rem, .8vw);
+    top: min(-90.2rem, -75.1vw);
+    width: max(57rem, 47.5vw);
+    height: auto;
+    border: 8px solid var(--SoftRed);
+}
+
+.FrameDesc {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: max(47px, 2.4vw);
+    color: var(--GrungeGreen);
+    top: min(-110.5rem, -92vw);
+    left: max(1rem, .8vw);
+}
+
+.LMLGTT {
+    position: relative;
+    display: inline-block;
+    top: min(-117rem, -96vw);
+    font-size: max(55px, 2.9vw);
+    margin-left: auto;
+    left: max(62rem, 51.6vw);
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(20px, .5vw);
+    text-decoration: none;
+    width: max(25rem, 20.87vw);
+    text-align: center;
+}
+
+.LMLGTT:hover {
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+}
+
+.LMLRTH {
+    position: relative;
+    display: inline-block;
+    top: min(-117.3rem, -96.3vw);
+    font-size: max(41px, 2.1vw);
+    margin-left: auto;
+    left: max(62.5rem, 52.1vw);
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding-top: max(28px, 1.1vw);
+    padding-bottom: max(28px, 1.1vw);
+    text-decoration: none;
+    width: max(27rem, 22.5vw);
+    text-align: center;
+}
+
+.LMLRTH:hover {
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+}
+
+.LMLEmail {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: max(58px, 3vw);
+    color: var(--GrungeGreen);
+    top: min(-121rem, -98.8vw);
+    line-height: 1.2;
+    text-align: right;
+    right: max(1.5rem, 1.2vw);
 }
