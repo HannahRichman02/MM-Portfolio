@@ -297,6 +297,10 @@ Beginning of the SLEEPLESS NIGHT div
     top: -27rem;
 }
 
+.SleeplessNight {
+    text-decoration: none;
+}
+
 .Sleepless {
     position: relative;
     display: block;

@@ -319,6 +319,38 @@ export function getLightClass(location: string, which: string): boolean {
 }
 
 /*
+* NAVIGATION - SYNCED HOVER
+ */
+
+let SleeplessHover : boolean = $state(false)
+let LogoManiaHover : boolean = $state(false)
+
+export function setSyncedHover(which: string, hover: boolean): void {
+    switch (which) {
+        case 'Sleepless':
+            SleeplessHover = hover;
+            break;
+        case 'LogoMania':
+            LogoManiaHover = hover;
+            break;
+        default:
+            break;
+    }
+}
+
+export function getHoverClass(which: string): boolean {
+    switch (which) {
+        case 'Sleepless':
+            return SleeplessHover;
+        case 'LogoMania':
+            return LogoManiaHover;
+        default:
+            return false;
+    }
+}
+
+
+/*
 * NAVIGATION - BUTTONS and ANCHORS
  */
 

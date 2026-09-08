@@ -6,7 +6,9 @@
         getLightClass,
         lineCanvasAction,
         headerText,
-        navigationButtons
+        navigationButtons,
+        setSyncedHover,
+        getHoverClass,
     } from './evenmore.svelte.ts';
     import Header from './Header/Header.svelte';
 </script>
@@ -20,9 +22,9 @@
                 <img src="/Images/SN_GIF3.gif" class={`SNGIF${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_NightGIF" onmouseover={() => restartGif('sleepless')} onfocus={() => restartGif('sleepless')}>
         {/key}
     </div>
-    <a href="/SleeplessNight">
-        <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``}`}>SLEEPLESS</p>
-        <p class={`Night${getLightClass("Work", "second") ? ` highlight` : ``}`}>NIGHT</p>
+    <a href="/SleeplessNight" class="SleeplessNight">
+        <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``} ${getHoverClass("Sleepless") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('Sleepless', true)} onmouseleave={() => setSyncedHover('Sleepless', false)}>SLEEPLESS</p>
+        <p class={`Night${getLightClass("Work", "second") ? ` highlight` : ``} ${getHoverClass("Sleepless") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('Sleepless', true)} onmouseleave={() => setSyncedHover('Sleepless', false)}>NIGHT</p>
     </a>
     <img src="/Images/Stars_v02.png" class={`Stars_Line${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Starries>
     <img src="/Images/Cosmic_v03.png" class={`Cosmic_Swirl${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Cosmic-Swirl>
@@ -90,8 +92,8 @@
         <img src="/Images/Ghostly_Rose.png" class={`GhostlyRose${getLightClass("Work", "tenth") ? ' highlightborder' : ``}`} alt="Ghostly Rose">
     </a>
     <img src="/Images/Bars.png" class={`BarLines${getLightClass("Work", "tenth") ? ` highlightgreen` : ``}`} alt="BarLines">
-    <p class={`Logo${getLightClass("Work", "eleventh") ? ` highlight` : ``}`}>LOGO</p>
-    <p class={`Mania${getLightClass("Work", "eleventh") ? ` highlight` : ``}`}>MANIA</p>
+    <p class={`Logo${getLightClass("Work", "eleventh") ? ` highlight` : ``} ${getHoverClass("LogoMania") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('LogoMania', true)} onmouseleave={() => setSyncedHover('LogoMania', false)}>LOGO</p>
+    <p class={`Mania${getLightClass("Work", "eleventh") ? ` highlight` : ``} ${getHoverClass("LogoMania") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('LogoMania', true)} onmouseleave={() => setSyncedHover('LogoMania', false)}>MANIA</p>
     <img src="/Images/Arrows.png" class={`Arrows${getLightClass("Work", "twelfth") ? ` highlightorange` : ``}`} alt="Arrows">
     <img src="/Images/Rectangles.png" class={`Rectangles${getLightClass("Work", "thirteenth") ? ` highlightyellow` : ``}`} alt="Rectangles">
     <img src="/Images/Rectangles_Rotating.png" class={`RRectangles${getLightClass("Work", "twelfth") ? ` highlightgreen` : ``}`} alt="Rotating Rectangles">
