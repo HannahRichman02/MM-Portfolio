@@ -1,0 +1,385 @@
+body {
+    background-color: var(--DeepBrown);
+    width: 1920px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HEADER div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Buttons {
+    left: max(.3rem, .24vw);
+}
+
+.BackToHome {
+    position: relative;
+    margin-left: auto;
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    font-size: max(35px, 1.25vw);
+    text-decoration: none;
+    justify-content: center;
+    top: .7rem;
+    background-color: var(--GrungeGreen);
+    border: 5px solid var(--GrungeGreen);
+    border-radius: 20px;
+    padding: max(18px, .9vw);
+    padding-block: max(10px, .5vw);
+}
+
+.BackToHome:hover {
+    color: var(--GrungeGreen);
+    background-color: var(--DeepBrown);
+}
+
+.Welcome {
+    left: max(2.5rem, 2vw) !important;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TITLE Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.SN_Title {
+    position: relative;
+    display: block;
+    background-color: var(--SoftRed);
+    top: -9.7rem;
+    height: 34.5rem;
+}
+
+.TitleSleepless {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 161px;
+    color: var(--DeepBrown);
+    transform: scaleY(2.3);
+    top: 3rem;
+}
+
+.TitleNight {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 161px;
+    color: var(--DeepBrown);
+    transform: scaleY(2.3);
+    top: -2rem;
+}
+
+.TopDeco {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    right: 1rem;
+    width: 52.5rem;
+    height: auto;
+    top: -26.5rem;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VIDEO Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.VideoMain {
+    position: relative;
+    display: block;
+    height: 58.5rem;
+    overflow: hidden;
+    top: -9.7rem;
+}
+
+.VidPlaceholder {
+    position: relative;
+    display: block;
+    width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    right: 1rem;
+}
+
+.PicPlaceholder {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 8px solid var(--GrungeGreen);
+    top: .5rem;
+}
+
+.SNChevronRight {
+    position: relative;
+    display: block;
+    width: 80rem;
+    height: auto;
+    transform: rotate(90deg);
+    top: -21rem;
+    right: 35.5rem;
+}
+
+.SNChevronLeft {
+    position: relative;
+    display: block;
+    width: 80rem;
+    height: auto;
+    transform: rotate(-90deg);
+    top: -27.5rem;
+    left: 74.5rem;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESCRIPTION Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.DescriptionSN {
+    position: relative;
+    display: block;
+    top: -10.4rem;
+    height: 52.6rem;
+}
+
+.MidDeco {
+    position: relative;
+    display: block;
+    width: 1900px;
+    height: auto;
+}
+
+.ProjectDesc {
+    position: relative;
+    display: block;
+    top: -43rem;
+    left: 9rem;
+    font-family: 'Paragraph';
+    font-size: 41px;
+    color: var(--GrungeGreen);
+}
+
+.Calendar {
+    position: relative;
+    display: flex;
+    background-color: aqua;
+    height: 14.5rem;
+    width: 39rem;
+    margin-left: auto;
+    top: -72rem;
+    right: 2.7rem;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCK Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Clock {
+    position: relative;
+    display: flex;
+    background-color: green;
+    height: 11rem;
+    width: 40rem;
+    margin-left: auto;
+    top: -70.8rem;
+    right: 2.2rem;
+    font-family: 'Paragraph';
+    font-size: 10rem;
+    color: var(--SoftRed);
+    transform: scaleY(1.4);
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+END CLOCK Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.DesignFramesTitle {
+    position: relative;
+    display: block;
+    font-family: 'Title';
+    font-size: 90px;
+    color: var(--GrungeYellow);
+    top: -73.5rem;
+    left: 1rem;
+    transform: scaleY(2.9);
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GALLERY Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.Gallery {
+    position: relative;
+    display: block;
+    background-color: var(--GrungeGreen);
+    height: 22rem;
+    top: -76rem;
+    margin: 0;
+    overflow: hidden;
+}
+
+.GalleryTrack img {
+    width: 35rem;
+    height: auto;
+}
+
+.GalleryTrack {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(33.333% + .5rem);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    top: 1rem;
+    left: 5rem;
+    width: 109rem;
+}
+
+.GalleryTrack img:nth-child(1n+1) {
+    position: relative;
+    left: 2rem;
+}
+
+.GalleryTrack img:nth-child(3n+1) {
+    position: relative;
+    scroll-snap-align: start;
+    left: 2rem;
+}
+
+.GalleryTrack::scroll-button(left) {
+    content:"◀";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--DeepBrown);
+    color: var(--GrungeGreen);
+    border: 8px solid var(--DeepBrown);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 2;
+    cursor: pointer;
+    height: 10rem;
+}
+
+.GalleryTrack::scroll-button(right) {
+    content:"▶";
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--DeepBrown);
+    color: var(--GrungeGreen);
+    border: 8px solid var(--DeepBrown);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 2;
+    cursor: pointer;
+    height: 10rem;
+
+}
+
+.GalleryTrack::scroll-button(right):hover {
+    background: var(--GrungeGreen);
+    color: var(--DeepBrown);
+}
+
+.GalleryTrack::scroll-button(left):hover {
+    background: var(--GrungeGreen);
+    color: var(--DeepBrown);
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOOTER Div
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.SNFooter {
+    position: relative;
+    display: block;
+    height: 12rem;
+    overflow: hidden;
+    top: 12rem;
+}
+
+.BotDeco {
+    position: relative;
+    display: block;
+    width: 60rem;
+    height: auto;
+}
+
+.GTT2 {
+    position: relative;
+    display: inline-block;
+    font-size: max(47px, 2.5vw);
+    margin-left: auto;
+    left: 60.2rem;
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    padding: max(15px, .5vw);
+    text-decoration: none;
+    width: 26rem;
+    text-align: center;
+    top: -10.5rem;
+}
+
+.GTT2:hover {
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+}
+
+.RTH2 {
+    position: relative;
+    display: inline-block;
+    font-size: max(40px, 1.7vw);
+    margin-left: auto;
+    left: 60.4rem;
+    background-color: var(--GrungeYellow);
+    color: var(--DeepBrown);
+    font-family: 'Paragraph';
+    border: 5px solid var(--GrungeYellow);
+    border-radius: 20px;
+    text-decoration: none;
+    width: max(27rem, 22.5vw);
+    text-align: center;
+    padding: max(14px, 1vw);
+    top: -10.7rem;
+}
+
+.RTH2:hover {
+    background-color: var(--DeepBrown);
+    color: var(--GrungeYellow);
+}
+
+.Email2 {
+    position: relative;
+    display: block;
+    font-family: 'Paragraph';
+    font-size: max(60px, 3.1vw);
+    color: var(--GrungeGreen);
+    text-align: right;
+    right: 1.5rem;
+    top: -14rem;
+}

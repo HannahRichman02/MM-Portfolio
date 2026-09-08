@@ -20,11 +20,32 @@
                 <img src="/Images/SN_GIF3.gif" class={`SNGIF${getLightClass("Work", "first") ? ` highlightborder` : ``}`} alt="Sleepless_NightGIF" onmouseover={() => restartGif('sleepless')} onfocus={() => restartGif('sleepless')}>
         {/key}
     </div>
-    <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``}`}>SLEEPLESS</p>
-    <p class={`Night${getLightClass("Work", "second") ? ` highlight` : ``}`}>NIGHT</p>
+    <a href="/SleeplessNight">
+        <p class={`Sleepless${getLightClass("Work", "first") ? ` highlight` : ``}`}>SLEEPLESS</p>
+        <p class={`Night${getLightClass("Work", "second") ? ` highlight` : ``}`}>NIGHT</p>
+    </a>
     <img src="/Images/Stars_v02.png" class={`Stars_Line${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Starries>
     <img src="/Images/Cosmic_v03.png" class={`Cosmic_Swirl${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Cosmic-Swirl>
-    <img src="/Images/Chevron.png" class={`Chevron${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron>
+    <div class="MainChevronContainer">
+        <div class="ChevronAnimation">
+            <img src="/Images/Chevron_Single.png" class={`Chevron${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron1>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron2>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron3>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron4>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron5>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron6>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron7>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron8>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron9>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron10>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron11>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron12>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron13>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron14>
+            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron15>
+        </div>
+    </div>
     <img src="/Images/Button_Timer.png" class={`ButtonTimer${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Timer>
     <img src="/Images/Button_BedTime.png" class={`ButtonBedTime${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Bed-Time>
     <img src="/Images/Button_Moon.png" class={`ButtonMoon${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Moon>

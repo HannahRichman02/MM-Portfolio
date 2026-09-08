@@ -307,6 +307,7 @@ Beginning of the SLEEPLESS NIGHT div
     color: var(--GrungeGreen);
     transform: scaleX(.395);
     transition: color 0.5s ease-in-out;
+    text-decoration: none;
 }
 
 .Night {
@@ -318,7 +319,8 @@ Beginning of the SLEEPLESS NIGHT div
     font-size: max(200px, 10.4vw);
     color: var(--GrungeYellow);
     transform: scaleX(.395);
-    transition: color 0.5s ease-in-out
+    transition: color 0.5s ease-in-out;
+    text-decoration: none;
 }
 
 .Stars_Line {
@@ -343,15 +345,50 @@ Beginning of the SLEEPLESS NIGHT div
     transition: filter 0.5s ease-in-out;
 }
 
-.Chevron {
+/*
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CHEVRON div
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+.MainChevronContainer {
     position: relative;
     display: block;
+    background-color: aqua;
     top: min(-97rem, -80.8vw);
-    left: max(48rem, 40vw);
-    width: max(60rem, 50%);
+    width: max(100rem, 83.3vw);
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.ChevronAnimation {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.ChevronAnimation img {
+    flex-shrink: 0;
+    white-space: nowrap;
+    width: 5rem;
     height: auto;
     transition: filter 0.5s ease-in-out;
 }
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+/*
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CHEVRON div END
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
 
 .ButtonTimer {
     position: relative;
