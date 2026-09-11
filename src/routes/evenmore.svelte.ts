@@ -396,6 +396,89 @@ const contactButton: NavigationButton = {
 export const navigationButtons: NavigationButton[] = [workButton, aboutButton, contactButton];
 
 /*
+* DVD SCREEN
+*/
+
+/*                 TAKE 1
+const dvd = document.getElementById('dvd');
+
+let x = Math.random() * (window.innerWidth - 150);
+let y = Math.random() * (window.innerHeight - 150);
+let dx = 3;
+let dy = 3;
+
+function frame() {
+    x += dx;
+    y += dy;
+
+    if (x == dvd.clientWidth >= window.innerWidth || x <= 0) {
+        dx = -dx;
+    }
+
+    if (y == dvd.clientHeight >= window.innerHeight || y <= 0) {
+        dy = -dy;
+    }
+
+    dvd.style.left = x + 'px';
+    dvd.style.top = y + 'py';
+
+    requestAnimationFrame(frame);
+}
+
+frame();
+*/
+/*         TAKE 2
+let speed = 20;
+let scale = 0.17;
+let canvas;
+let ctx;
+
+let dvd = {
+    x: 200,
+    y: 300,
+    xspeed: 10,
+    yspeed: 10,
+    img: new Image()
+};
+
+(function main(){
+    canvas = document.getElementById("DVDContainer");
+    ctx = canvas.getContext("2d");
+    dvd.img.src = 'Chevron_Single.png';
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    update();
+})();
+
+function update() {
+    setTimeout(() => {
+        ctx.fillstyle = '#000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+        ctx.fillRect(dvd.x, dvd.y, dvd.img.width*scale, dvd.img.height*scale);
+        ctx.drawImage(dvd.img, dvd.x, dvd.y, dvd.img.width*scale, dvd.img.height*scale);
+
+        dvd.x+=dvd.xspeed;
+        dvd.y+=dvd.yspeed;
+
+        checkHitBox();
+        update();
+    }, speed)
+}
+
+function checkHitBox(){
+    if(dvd.x = dvd.img.width*scale >= canvas.width || dvd.x <= 0){
+        dvd.xspeed *= -1;
+    }
+
+}
+*/ 
+
+
+
+/*
 * MISC
  */
 

@@ -29,23 +29,8 @@
     <img src="/Images/Stars_v02.png" class={`Stars_Line${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Starries>
     <img src="/Images/Cosmic_v03.png" class={`Cosmic_Swirl${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Cosmic-Swirl>
     <div class="MainChevronContainer">
-        <div class="ChevronAnimation">
+        <div class={`ChevronAnimation${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`}>
             <img src="/Images/Chevron_Single.png" class={`Chevron${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron1>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron2>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron3>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron4>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron5>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron6>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron7>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron8>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron9>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron10>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron11>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron12>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron13>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron14>
-            <img src="/Images/Chevron_Single.png" class={`Chevron1${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron15>
         </div>
     </div>
     <img src="/Images/Button_Timer.png" class={`ButtonTimer${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Timer>
@@ -92,13 +77,17 @@
         <img src="/Images/Ghostly_Rose.png" class={`GhostlyRose${getLightClass("Work", "tenth") ? ' highlightborder' : ``}`} alt="Ghostly Rose">
     </a>
     <img src="/Images/Bars.png" class={`BarLines${getLightClass("Work", "tenth") ? ` highlightgreen` : ``}`} alt="BarLines">
-    <p class={`Logo${getLightClass("Work", "eleventh") ? ` highlight` : ``} ${getHoverClass("LogoMania") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('LogoMania', true)} onmouseleave={() => setSyncedHover('LogoMania', false)}>LOGO</p>
-    <p class={`Mania${getLightClass("Work", "eleventh") ? ` highlight` : ``} ${getHoverClass("LogoMania") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('LogoMania', true)} onmouseleave={() => setSyncedHover('LogoMania', false)}>MANIA</p>
+    <a href="/LogoMania" class="LMTitle">
+        <p class={`Logo${getLightClass("Work", "eleventh") ? ` highlight` : ``} ${getHoverClass("LogoMania") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('LogoMania', true)} onmouseleave={() => setSyncedHover('LogoMania', false)}>LOGO</p>
+        <p class={`Mania${getLightClass("Work", "eleventh") ? ` highlight` : ``} ${getHoverClass("LogoMania") ? `highlight` : ``}`} onmouseenter={() => setSyncedHover('LogoMania', true)} onmouseleave={() => setSyncedHover('LogoMania', false)}>MANIA</p>
+    </a>
     <img src="/Images/Arrows.png" class={`Arrows${getLightClass("Work", "twelfth") ? ` highlightorange` : ``}`} alt="Arrows">
     <img src="/Images/Rectangles.png" class={`Rectangles${getLightClass("Work", "thirteenth") ? ` highlightyellow` : ``}`} alt="Rectangles">
     <img src="/Images/Rectangles_Rotating.png" class={`RRectangles${getLightClass("Work", "twelfth") ? ` highlightgreen` : ``}`} alt="Rotating Rectangles">
     <img src="/Images/Checkers.png" class={`Checkers${getLightClass("Work", "thirteenth") ? ` highlightred` : ``}`} alt="Checkers">
-    <img src="/Images/Swirlies.png" class={`Swirlies${getLightClass("Work", "twelfth") ? ` highlightyellow` : ``}`} alt="Swirlies">
+    <canvas class="DVDContainer">
+        <img id="dvd" src="/Images/Swirlies.png" class={`Swirlies${getLightClass("Work", "twelfth") ? ` highlightyellow` : ``}`} alt="Swirlies">
+    </canvas>
     <img src="/Images/Search_Bar.png" class={`SearchBar${getLightClass("Work", "thirteenth") ? ` highlightorange` : ``}`} alt="Search Bar">
     <p class={`Branding${getLightClass("Work", "thirteenth") ? ` highlight` : ``}`}>BRANDING</p>
     <img src="/Images/Gradient_Bar.png" class={`GradientBar${getLightClass("Work", "fourteenth") ? ` highlightgreen` : ``}`} alt="Gradient Bar">

@@ -1,9 +1,6 @@
 <script>
     import '$lib/styles/sncontentcard.css'
     import Header from '../Header/Header.svelte';
-    import { initialize, updateTime } from './sn.svelte.ts'
-
-    initialize
 
     const backToHome = {
             isButton: false,
@@ -27,16 +24,22 @@
 </div>
 <div class="VideoMain">
     <div class="VidPlaceholder">
-        <img src="/Images/Dark_Fright.jpg" class="PicPlaceholder" alt=PicPlaceholder>
+        <video controls>
+            <source src="https://vimeo.com/1225829112?fl=pl&fe=sh" type="video/mp4" class="PicPlaceHolder">
+        </video>
     </div>
-    <img src="/Images/Chevron.png" class="SNChevronRight" alt=SNChevronRight>
-    <img src="/Images/Chevron.png" class="SNChevronLeft" alt=SNChevronLeft>
+    <div class="CLeftPlacement">
+        <div class="ChevronLeft"></div>
+    </div>
+    <div class="CRightPlacement">
+        <div class="ChevronRight"></div>
+    </div>
 </div>
 <div class="DescriptionSN">
     <img src="/Images/SN_BG_Mid.png" class="MidDeco" alt=MidDeco>
     <p class="ProjectDesc">This was a project done in my senior year<br>of college that sparked my interest and<br>love for motion media. After an insomnia<br>diagnosis in 2020, staying up until the sun<br>rose became a regular occurence for me<br>and I wanted to take this project to<br>capture the dichotomy between loving late<br>nights and the endless effort that became<br>falling asleep.</p>
     <div class="Calendar"></div>
-    <div class="Clock" use:updateTime>16:20</div>
+    <div class="Clock">16:20</div>
     <p class="DesignFramesTitle">DESIGN FRAMES</p>
     <div class="Gallery">
         <div class="GalleryTrack">

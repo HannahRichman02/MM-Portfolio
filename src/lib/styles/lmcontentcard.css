@@ -451,14 +451,36 @@ GHOSTLY ROSE Div
     right: max(1.5rem, 1.2vw);
 }
 
-.GRChevron {
+.GRChevronContainer {
     position: relative;
     display: block;
     top: min(-372.3rem, -307.5vw);
     left: max(41rem, 34.2vw);
-    width: max(70rem, 58.3vw);
-    height: auto;
+    width: 100rem;
+    height: 5rem;
 }
+
+.GRChevronContainer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/Images/Chevron_Single.png');
+    background-size: contain;
+
+    will-change: transform;
+
+    animation: smoothBg 20s linear infinite;
+}
+
+@keyframes smoothBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 94.5rem, 0;
+    }
+}
+
 
 /*
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

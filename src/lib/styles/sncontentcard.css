@@ -116,6 +116,7 @@ VIDEO Div
     height: auto;
     border: 8px solid var(--GrungeGreen);
     top: .5rem;
+    object-fit: cover;
 }
 
 .SNChevronRight {
@@ -128,14 +129,86 @@ VIDEO Div
     right: 35.5rem;
 }
 
-.SNChevronLeft {
+/*
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CHEVRON div LEFT
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+.ChevronLeft {
     position: relative;
     display: block;
-    width: 80rem;
-    height: auto;
-    transform: rotate(-90deg);
     top: -27.5rem;
-    left: 74.5rem;
+    height: 6rem;
+    right: 45.8rem;
+    margin-right: auto;
+    width: max(100rem, 83.3vw);
+    overflow: hidden;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    transform: rotate(90deg);
+}
+
+.ChevronLeft::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/Images/Chevron_Single.png');
+    background-size: contain;
+
+    will-change: transform;
+
+    animation: smoothBg 20s linear infinite;
+}
+
+@keyframes smoothBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 94.7rem, 0;
+    }
+}
+
+/*
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CHEVRON div RIGHT
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+.ChevronRight {
+    position: relative;
+    display: block;
+    top: -27.5rem;
+    height: 6rem;
+    left: 44.8rem;
+    margin-left: auto;
+    width: max(100rem, 83.3vw);
+    overflow: hidden;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    transform: rotate(-90deg);
+}
+
+.ChevronRight::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/Images/Chevron_Single.png');
+    background-size: contain;
+
+    will-change: transform;
+
+    animation: smoothBg 20s linear infinite;
+}
+
+@keyframes smoothBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 94.7rem, 0;
+    }
 }
 
 /*

@@ -73,7 +73,8 @@ const BTH = [ backToHome ]
     <a href="#TopLM" class="LMGRGTT">Go To Top</a>
     <a href="/" class="LMGRRTH">Return To Home</a>
     <p class="LMGREmail">hannahrichman.art@gmail.com</p>
-    <img src="/Images/Chevron.png" class="GRChevron" alt=GRChevron>
+    <div class="GRChevronContainer">
+    </div>
 </div>
 {/if}
 {#if lupineSelected}

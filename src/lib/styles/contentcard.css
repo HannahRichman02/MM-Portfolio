@@ -268,6 +268,7 @@ Beginning of the SLEEPLESS NIGHT div
 
 .SN_Gif_Container {
     height: 28rem;
+    z-index: 6;
 }
 
 .SNSC {
@@ -279,7 +280,7 @@ Beginning of the SLEEPLESS NIGHT div
     height: auto;
     border: max(.5rem, .4vw) solid var(--EngineOrange); 
     transition: border 0.5s ease-in-out;
-    z-index: 1;
+    z-index: 8;
 }
 
 .SNSC:hover {
@@ -295,6 +296,7 @@ Beginning of the SLEEPLESS NIGHT div
     border: max(.5rem, .4vw) solid var(--BrightYellow); 
     transition: border 0.5s ease-in-out;
     top: -27rem;
+    z-index: 7;
 }
 
 .SleeplessNight {
@@ -358,33 +360,33 @@ CHEVRON div
 .MainChevronContainer {
     position: relative;
     display: block;
-    background-color: aqua;
-    top: min(-97rem, -80.8vw);
+    top: min(-96.7rem, -75vw);
+    height: 4.7rem;
     width: max(100rem, 83.3vw);
     margin-left: auto;
     overflow: hidden;
+    background-repeat: repeat-x;
+    background-position: 0 0;
 }
 
-.ChevronAnimation {
-    display: flex;
-    width: max-content;
-    animation: scroll-left 15s linear infinite;
+.MainChevronContainer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/Images/Chevron_Single.png');
+    background-size: contain;
+
+    will-change: transform;
+
+    animation: smoothBg 20s linear infinite;
 }
 
-.ChevronAnimation img {
-    flex-shrink: 0;
-    white-space: nowrap;
-    width: 5rem;
-    height: auto;
-    transition: filter 0.5s ease-in-out;
-}
-
-@keyframes scroll-left {
+@keyframes smoothBg {
     0% {
-        transform: translateX(0);
+        background-position: 0 0;
     }
     100% {
-        transform: translateX(150%);
+        background-position: 93.9rem, 0;
     }
 }
 
@@ -470,7 +472,7 @@ CHEVRON div END
 .Planet {
     position: relative;
     display: block;
-    top: min(-163.4rem, -136.1vw);
+    top: -163.2rem;
     margin-left: auto;
     right: max(1.8rem, 1.6vw);
     width: max(24.4rem, 20.3%);
@@ -499,6 +501,7 @@ Beginning of the LOGO MANIA div
     top: max(1rem, .8vw);
     border: max(.5rem, .4vw) solid var(--EngineOrange);
     transition: border 0.5s ease-in-out;
+    z-index: 6;
 }
 
 .BarLines {
@@ -511,6 +514,10 @@ Beginning of the LOGO MANIA div
     top: min(-29.1rem, -24.2vw);
     transition: filter 0.5s ease-in-out;
     
+}
+
+.LMTitle {
+    text-decoration: none;
 }
 
 .Logo {
@@ -579,7 +586,7 @@ Beginning of the LOGO MANIA div
     transition: filter 0.5s ease-in-out;
 }
 
-.Swirlies {
+.DVDContainer {
     position: relative;
     display: block;
     top: min(-84.6rem, -70.5vw);
@@ -587,7 +594,13 @@ Beginning of the LOGO MANIA div
     right: max(1rem, .8vw);
     width: max(27.8rem, 23.2vw);
     height: max(9.3rem, 7.7vw);
+    background-color: black;
+}
+
+.Swirlies {
     transition: filter 0.5s ease-in-out;
+    width: 2rem;
+    height: 2rem;
 }
 
 .SearchBar {
