@@ -1,6 +1,8 @@
 <script>
     import '$lib/styles/sncontentcard.css'
     import Header from '../Header/Header.svelte';
+    import MonthCalendar from '$lib/components/MonthCalendar.svelte';
+    import LiveClock from '$lib/components/LiveClock.svelte';
 
     const backToHome = {
             isButton: false,
@@ -24,9 +26,7 @@
 </div>
 <div class="VideoMain">
     <div class="VidPlaceholder">
-        <video controls>
-            <source src="https://vimeo.com/1225829112?fl=pl&fe=sh" type="video/mp4" class="PicPlaceHolder">
-        </video>
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1225829112?h=ca8ed9bb3c" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
     </div>
     <div class="CLeftPlacement">
         <div class="ChevronLeft"></div>
@@ -38,8 +38,12 @@
 <div class="DescriptionSN">
     <img src="/Images/SN_BG_Mid.png" class="MidDeco" alt=MidDeco>
     <p class="ProjectDesc">This was a project done in my senior year<br>of college that sparked my interest and<br>love for motion media. After an insomnia<br>diagnosis in 2020, staying up until the sun<br>rose became a regular occurence for me<br>and I wanted to take this project to<br>capture the dichotomy between loving late<br>nights and the endless effort that became<br>falling asleep.</p>
-    <div class="Calendar"></div>
-    <div class="Clock">16:20</div>
+    <div class="Calendar">
+        <MonthCalendar />
+    </div>
+    <div class="Clock">
+        <LiveClock />
+    </div>
     <p class="DesignFramesTitle">DESIGN FRAMES</p>
     <div class="Gallery">
         <div class="GalleryTrack">
