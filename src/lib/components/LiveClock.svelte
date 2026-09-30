@@ -20,8 +20,19 @@
         return `${paddedHours}:${paddedMinutes}`;
     }
 
+    /**
+     * @param {Date} value
+     * @returns {string}
+     */
+    function formatPeriod(value) {
+        return value.getHours() < 12 ? 'AM' : 'PM';
+    }
+
     /** @type {string} */
     const displayTime = $derived(formatTime(now, use24Hour));
+
+    /** @type {string} */
+    const displayPeriod = $derived(formatPeriod(now));
 
     onMount(() => {
         /** @type {ReturnType<typeof setInterval>} */
@@ -33,10 +44,29 @@
     });
 </script>
 
-<span class="LiveClockTime">{displayTime}</span>
+<span class="LiveClock">
+    <span class="LiveClockTime">{displayTime}</span>
+    {#if !use24Hour}
+        <span class="LiveClockPeriod">{displayPeriod}</span>
+    {/if}
+</span>
 
 <style>
+    .LiveClock {
+        display: flex;
+        align-items: center;
+    }
+
     .LiveClockTime {
         display: block;
+    }
+
+    .LiveClockPeriod {
+        display: block;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        font-size: 0.4em;
+        line-height: 1;
+        margin-left: 0.15em;
     }
 </style>

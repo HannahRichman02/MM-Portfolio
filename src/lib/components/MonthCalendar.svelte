@@ -3,9 +3,6 @@
     let { date = new Date() } = $props();
 
     /** @type {string[]} */
-    const weekdayLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-
-    /** @type {string[]} */
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'
@@ -38,17 +35,16 @@
     /** @type {(number | null)[]} */
     const dayCells = $derived(buildDayCells(date));
     /** @type {string} */
-    const monthLabel = $derived(`${monthNames[date.getMonth()]} ${date.getFullYear()}`);
+    const monthLabel = $derived(monthNames[date.getMonth()]);
+    /** @type {number} */
+    const currentDay = $derived(date.getDate());
 </script>
 
 <div class="MonthCalendar">
     <div class="MonthCalendarTitle">{monthLabel}</div>
     <div class="MonthCalendarGrid">
-        {#each weekdayLabels as label, index (index)}
-            <div class="MonthCalendarWeekday">{label}</div>
-        {/each}
         {#each dayCells as day, index (index)}
-            <div class="MonthCalendarDay">{day ?? ''}</div>
+            <div class="MonthCalendarDay" class:MonthCalendarDayCurrent={day === currentDay}>{day ?? ''}</div>
         {/each}
     </div>
 </div>
@@ -64,8 +60,10 @@
 
     .MonthCalendarTitle {
         text-align: center;
-        font-weight: 700;
         padding: 0.25rem 0;
+        background-color: var(--GrungeYellow);
+        color: var(--DeepBrown);
+        font-family: 'Title';
     }
 
     .MonthCalendarGrid {
@@ -73,18 +71,21 @@
         grid-template-columns: repeat(7, 1fr);
         grid-auto-rows: 1fr;
         flex: 1;
-    }
-
-    .MonthCalendarWeekday {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
+        border-left: 1px solid var(--GrungeYellow);
+        border-top: 1px solid var(--GrungeYellow);
     }
 
     .MonthCalendarDay {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--GrungeYellow);
+        border-right: 1px solid var(--GrungeYellow);
+        border-bottom: 1px solid var(--GrungeYellow);
+    }
+
+    .MonthCalendarDayCurrent {
+        background-color: var(--GrungeYellow);
+        color: var(--DeepBrown);
     }
 </style>
