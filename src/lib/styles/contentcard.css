@@ -367,6 +367,7 @@ CHEVRON div
     overflow: hidden;
     background-repeat: repeat-x;
     background-position: 0 0;
+    transition: filter 0.5s ease-in-out;
 }
 
 .MainChevronContainer::before {

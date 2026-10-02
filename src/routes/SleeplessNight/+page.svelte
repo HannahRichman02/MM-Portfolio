@@ -42,7 +42,7 @@
         <MonthCalendar />
     </div>
     <div class="Clock">
-        <LiveClock />
+        <LiveClock use24Hour={false} />
     </div>
     <p class="DesignFramesTitle">DESIGN FRAMES</p>
     <div class="Gallery">

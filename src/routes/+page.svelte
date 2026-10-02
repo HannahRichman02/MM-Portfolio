@@ -28,11 +28,7 @@
     </a>
     <img src="/Images/Stars_v02.png" class={`Stars_Line${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Starries>
     <img src="/Images/Cosmic_v03.png" class={`Cosmic_Swirl${getLightClass("Work", "second") ? ' highlightorange' : ``}`} alt=Cosmic-Swirl>
-    <div class="MainChevronContainer">
-        <div class={`ChevronAnimation${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`}>
-            <img src="/Images/Chevron_Single.png" class={`Chevron${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`} alt=Chevron>
-        </div>
-    </div>
+    <div class={`MainChevronContainer${getLightClass("Work", "fourth") ? ' highlightyellow' : ``}`}></div>
     <img src="/Images/Button_Timer.png" class={`ButtonTimer${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Timer>
     <img src="/Images/Button_BedTime.png" class={`ButtonBedTime${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Bed-Time>
     <img src="/Images/Button_Moon.png" class={`ButtonMoon${getLightClass("Work", "third") ? ' highlightred' : ``}`} alt=Moon>
