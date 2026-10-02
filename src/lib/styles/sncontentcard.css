@@ -53,7 +53,7 @@ TITLE Div
     display: block;
     background-color: var(--SoftRed);
     top: -9.7rem;
-    height: 34.5rem;
+    height: 29.5rem;
 }
 
 .TitleSleepless {
@@ -62,8 +62,8 @@ TITLE Div
     font-family: 'Title';
     font-size: 161px;
     color: var(--DeepBrown);
-    transform: scaleY(2.3);
-    top: 3rem;
+    transform: scaleY(2);
+    top: 1.5rem;
 }
 
 .TitleNight {
@@ -72,8 +72,8 @@ TITLE Div
     font-family: 'Title';
     font-size: 161px;
     color: var(--DeepBrown);
-    transform: scaleY(2.3);
-    top: -2rem;
+    transform: scaleY(2);
+    top: -6rem;
 }
 
 .TopDeco {
@@ -83,7 +83,8 @@ TITLE Div
     right: 1rem;
     width: 52.5rem;
     height: auto;
-    top: -26.5rem;
+    top: -30.5rem;
+    transform: scaleY(.87)
 }
 
 /*
@@ -107,6 +108,11 @@ VIDEO Div
     margin-left: auto;
     margin-right: auto;
     right: 1rem;
+    top: .5rem;
+}
+
+.MainVideo {
+    border: 8px solid var(--GrungeGreen);
 }
 
 .PicPlaceholder {
@@ -250,7 +256,15 @@ DESCRIPTION Div
     margin-left: auto;
     top: -72rem;
     right: 2.7rem;
+    font-family: 'Title';
 }
+
+.weekdays span {
+    display: none;
+}
+
+
+
 
 /*
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -261,7 +275,6 @@ CLOCK Div
 .Clock {
     position: relative;
     display: flex;
-    background-color: green;
     height: 11rem;
     width: 40rem;
     margin-left: auto;

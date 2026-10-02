@@ -26,7 +26,7 @@
 </div>
 <div class="VideoMain">
     <div class="VidPlaceholder">
-        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1225829112?h=ca8ed9bb3c" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+        <iframe class="MainVideo" title="vimeo-player" src="https://player.vimeo.com/video/1225829112?h=ca8ed9bb3c" width="1600" height="900" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
     </div>
     <div class="CLeftPlacement">
         <div class="ChevronLeft"></div>
